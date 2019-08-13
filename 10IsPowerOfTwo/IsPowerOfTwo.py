@@ -10,22 +10,22 @@ Given an integer, write a function to determine if it is a power of two.
 """
 Input: 1
 Output: true
-Explanation: 20 = 1
+Explanation: 2^0 = 1
 """
 #Example 2:
 """
 Input: 16
 Output: true
-Explanation: 24 = 16
+Explanation: 2^4 = 16
 """
 #Example 3:
 """
 Input: 218
 Output: false
 """
-#解题思路：
+#Solution：
 """
-利用位运算，如8 & 7 (1000 & 0111 = 0000), 4 & 3 (0100 & 0011 = 0000)
+Bit operation，e.g.8 & 7 (1000 & 0111 = 0000), 4 & 3 (0100 & 0011 = 0000)
 """
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
