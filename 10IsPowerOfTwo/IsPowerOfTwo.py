@@ -23,9 +23,9 @@ Explanation: 24 = 16
 Input: 218
 Output: false
 """
-#解题思路：
+#Solution：
 """
-利用位运算，如8 & 7 (1000 & 0111 = 0000), 4 & 3 (0100 & 0011 = 0000)
+Bit operation，e.g.8 & 7 (1000 & 0111 = 0000), 4 & 3 (0100 & 0011 = 0000)
 """
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
