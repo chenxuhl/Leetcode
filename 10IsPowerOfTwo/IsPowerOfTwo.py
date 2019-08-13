@@ -10,13 +10,13 @@ Given an integer, write a function to determine if it is a power of two.
 """
 Input: 1
 Output: true
-Explanation: 20 = 1
+Explanation: 2^0 = 1
 """
 #Example 2:
 """
 Input: 16
 Output: true
-Explanation: 24 = 16
+Explanation: 2^4 = 16
 """
 #Example 3:
 """
