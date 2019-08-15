@@ -1,36 +1,39 @@
-#²Î¿¼Á´½Ó£ºhttps://zhuanlan.zhihu.com/p/60938062
+#reference:https://zhuanlan.zhihu.com/p/60938062
+#å½’å¹¶æ’åºï¼š
+"""
+https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F#Python
+pythonå®ç°ï¼Œé“¾è¡¨ä¸æ•°ç»„ä¸åŒç‚¹åœ¨äºï¼Œæ•°ç»„ä¸­é—´ç‚¹ç›´æ¥æ•´é™¤å³å¯ï¼Œè€Œé“¾è¡¨ä¸­é—´ç‚¹éœ€è¦ç”¨åˆ°å¿«æ…¢æŒ‡é’ˆ
+"""
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
-#¹é²¢ÅÅĞò²Î¿¼Î¬»ù°Ù¿Æ£ºhttps://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F#Python
-#pythonÊµÏÖ£¬Á´±íÓëÊı×é²»Í¬µãÔÚÓÚ£¬Êı×éÖĞ¼äµãÖ±½ÓÕû³ı¼´¿É£¬¶øÁ´±íÖĞ¼äµãĞèÒªÓÃµ½¿ìÂıÖ¸Õë
 class Solution:
     def sortList(self, head):
         if not head or not head.next:
             return head
-        mid = self.__findMidNode(head)
-        left = self.sortList(head)  #Ê¹ÓÃµİ¹éµ÷ÓÃ
-        right = self.sortList(mid)
-        return self.__merge(left, right)
-#ÕÒÖĞ¼ä½Úµã£¬²ÉÓÃ¿ìÂıÖ¸Õë£¬ÂıÖ¸Õë×ßÒ»²½£¬¿ìÖ¸Õë×ßÁ½²½£¬µ±¿ìÖ¸Õë×ßµ½Á´±íÎ²²¿£¬ÂıÖ¸Õë¾ÍÖ¸ÏòÖĞ¼ä½Úµã£¬¿ìÂıÖ¸ÕëµÄ×ö·¨Ö»ĞèÒªÉ¨ÃèÒ»±éÁ´±í¼´¿É¡£
-    def __findMidNode(self, head):
-        # ÕÒµ½ÖĞ¼ä½Úµã£¬¶Ï¿ªÁ´±í£¬Ö®ºóÔÙ__mergeÖĞºÏ²¢Á½¸öÁ´±í
+        middle = self.find_middle(head)
+        left = self.sortList(head)
+        right = self.sortList(middle)
+        return self.merge(left, right)
+#æ‰¾ä¸­é—´èŠ‚ç‚¹ï¼Œé‡‡ç”¨å¿«æ…¢æŒ‡é’ˆï¼Œæ…¢æŒ‡é’ˆèµ°ä¸€æ­¥ï¼Œå¿«æŒ‡é’ˆèµ°ä¸¤æ­¥ï¼Œ
+#å½“å¿«æŒ‡é’ˆèµ°åˆ°é“¾è¡¨å°¾éƒ¨ï¼Œæ…¢æŒ‡é’ˆå°±æŒ‡å‘ä¸­é—´èŠ‚ç‚¹ï¼Œå¿«æ…¢æŒ‡é’ˆçš„åšæ³•åªéœ€è¦æ‰«æä¸€éé“¾è¡¨å³å¯ã€‚
+    def find_middle(self, head):
         slow = fast = head
         while fast.next and fast.next.next:
             slow = slow.next
             fast = fast.next.next
-        p = slow.next   #ÂıÖ¸ÕëÖ¸ÏòÖĞ¼ä½Úµã
+        mid = slow.next
         slow.next = None
-        return p
+        return mid
 
-    def __merge(self, left, right):
-        dummy = ListNode(0)
-        res = dummy
+    def merge(self, left, right):
+        tempNode = ListNode(0)
+        res = tempNode
         while left and right:
             if left.val <= right.val:
-                res.next = left   #½«resÏÂÒ»¸öµ¥ÔªÖ¸Ïòleft
+                res.next = left
                 left = left.next
             else:
                 res.next = right
@@ -44,4 +47,4 @@ class Solution:
             res.next = right
             right = right.next
             res = res.next
-        return dummy.next
+        return tempNode.next

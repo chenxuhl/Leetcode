@@ -9,21 +9,21 @@ class Solution:
         nodeList = []
         for i in range(len(lists)):
             currentNode = lists[i]
-            #±éÀúÄ³¸öÁ´±í
-            while(currentNode):
+            # éå†æŸä¸ªé“¾è¡¨
+            while (currentNode):
                 nodeList.append(currentNode)
                 currentNode = currentNode.next
-                
-        #¸ù¾İnodeµÄval¶ÔÊı×é½øĞĞÅÅĞò  
-        nodeList = sorted(nodeList,key = lambda x:x.val)
-        
-        #¶ÔÅÅĞòºÃµÄÊı×éµÄÔªËØ£¬Ò»¸ö¸öµØÁ¬½Ó³ÉĞÂµÄÁ´±í£¨ÕâÀïµÄtempHeadÊÇÎªÁË·½±ãÉèÖÃµÄÍ·½Úµã£©
+
+        # æ ¹æ®nodeçš„valå¯¹æ•°ç»„è¿›è¡Œæ’åº
+        nodeList = sorted(nodeList, key=lambda x: x.val)
+
+        # å¯¹æ’åºå¥½çš„æ•°ç»„çš„å…ƒç´ ï¼Œä¸€ä¸ªä¸ªåœ°è¿æ¥æˆæ–°çš„é“¾è¡¨ï¼ˆè¿™é‡Œçš„tempHeadæ˜¯ä¸ºäº†æ–¹ä¾¿è®¾ç½®çš„å¤´èŠ‚ç‚¹ï¼‰
         tempHead = ListNode(0)
         currentNode = tempHead
         for i in range(len(nodeList)):
             currentNode.next = nodeList[i]
             currentNode = currentNode.next
-            
+
         return tempHead.next
-                
+
         

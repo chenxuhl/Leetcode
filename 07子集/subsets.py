@@ -1,4 +1,4 @@
-#参考：http://www.voidcn.com/article/p-osxncqlg-brs.html
+#reference：http://www.voidcn.com/article/p-osxncqlg-brs.html
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         self.results = []

@@ -1,5 +1,4 @@
-#贪心算法，只要升值就抛售
-
+#璐績绠楁硶锛屽彧瑕佸崌鍊煎氨鎶涘敭
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         n = len(prices)

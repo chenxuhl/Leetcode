@@ -1,4 +1,4 @@
-#v1£ºself-thinking
+#v1 self-thinking
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         nums = sorted(nums)
@@ -13,8 +13,8 @@ class Solution:
         return result
         
 
-#v2,reference£ºhttps://github.com/grandyang/leetcode/issues/136
-#a¨’b¨’a=b
+#v2 referenceï¼šhttps://github.com/grandyang/leetcode/issues/136
+#aâŠ•bâŠ•a=b
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         r = 0
