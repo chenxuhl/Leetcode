@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="313c17ef-35cb-429e-9831-2f874bc5a6d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Q.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/26Spiral_Matrix Ⅱ/generateMatrix.py">
+        <entry file="file://$PROJECT_DIR$/28Merge_Sorted_Array/merge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+            <state relative-caret-position="154">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -62,6 +61,8 @@
         <option value="$PROJECT_DIR$/25Maximum_Subarray/maxSubArray.py" />
         <option value="$PROJECT_DIR$/25Spiral_Matrix/spiralOrder.py" />
         <option value="$PROJECT_DIR$/26Spiral_Matrix Ⅱ/generateMatrix.py" />
+        <option value="$PROJECT_DIR$/27Unique_Paths/uniquePaths.py" />
+        <option value="$PROJECT_DIR$/28Merge_Sorted_Array/merge.py" />
       </list>
     </option>
   </component>
@@ -85,11 +86,6 @@
             <path>
               <item name="Leetcode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="Leetcode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="26Spiral_Matrix Ⅱ" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -169,7 +165,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2600897" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29895365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -376,8 +372,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/26Spiral_Matrix Ⅱ/generateMatrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="506">
           <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/27Unique_Paths/uniquePaths.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/28Merge_Sorted_Array/merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
