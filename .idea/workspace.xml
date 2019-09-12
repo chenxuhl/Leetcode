@@ -13,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/28Merge_Sorted_Array/merge.py">
+        <entry file="file://$PROJECT_DIR$/30Contains_Duplicate/containsDuplicate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="286">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -63,10 +63,12 @@
         <option value="$PROJECT_DIR$/26Spiral_Matrix Ⅱ/generateMatrix.py" />
         <option value="$PROJECT_DIR$/27Unique_Paths/uniquePaths.py" />
         <option value="$PROJECT_DIR$/28Merge_Sorted_Array/merge.py" />
+        <option value="$PROJECT_DIR$/29Best_Time_to_Buy_and_Sell_Stock/maxProfit.py" />
+        <option value="$PROJECT_DIR$/30Contains_Duplicate/containsDuplicate.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="556" />
     <option name="y" value="-13" />
     <option name="width" value="779" />
@@ -86,6 +88,11 @@
             <path>
               <item name="Leetcode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="30Contains_Duplicate" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -165,7 +172,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29895365" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2406577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -386,8 +393,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/28Merge_Sorted_Array/merge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="88">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/29Best_Time_to_Buy_and_Sell_Stock/maxProfit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/30Contains_Duplicate/containsDuplicate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
