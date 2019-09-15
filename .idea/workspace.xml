@@ -10,20 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/31Product_of_Array_Expext_Self/productExcepSelf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="39" selection-start-line="38" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/32Add_Two_Numbers/addTwoNumbers.py">
+        <entry file="file://$PROJECT_DIR$/33Merge_Two_Sorted_Lists/mergeTwoLists.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+            <state relative-caret-position="266">
+              <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -74,10 +65,11 @@
         <option value="$PROJECT_DIR$/30Contains_Duplicate/containsDuplicate.py" />
         <option value="$PROJECT_DIR$/31Product_of_Array_Expext_Self/productExcepSelf.py" />
         <option value="$PROJECT_DIR$/32Add_Two_Numbers/addTwoNumbers.py" />
+        <option value="$PROJECT_DIR$/33Merge_Two_Sorted_Lists/mergeTwoLists.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="556" />
     <option name="y" value="-13" />
     <option name="width" value="779" />
@@ -112,7 +104,7 @@
             <path>
               <item name="Leetcode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="32Add_Two_Numbers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="33Merge_Two_Sorted_Lists" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -432,6 +424,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="946">
           <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/33Merge_Two_Sorted_Lists/mergeTwoLists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
         </state>
       </provider>
     </entry>
