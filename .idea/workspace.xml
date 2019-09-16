@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="313c17ef-35cb-429e-9831-2f874bc5a6d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/33Merge_Two_Sorted_Lists/mergeTwoLists.py" beforeDir="false" afterPath="$PROJECT_DIR$/33Merge_Two_Sorted_Lists/mergeTwoLists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/33Merge_Two_Sorted_Lists/mergeTwoLists.py">
+        <entry file="file://$PROJECT_DIR$/34Rotate_List/rotateRight.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-174">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="264">
+              <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -68,6 +68,7 @@
         <option value="$PROJECT_DIR$/31Product_of_Array_Expext_Self/productExcepSelf.py" />
         <option value="$PROJECT_DIR$/32Add_Two_Numbers/addTwoNumbers.py" />
         <option value="$PROJECT_DIR$/33Merge_Two_Sorted_Lists/mergeTwoLists.py" />
+        <option value="$PROJECT_DIR$/34Rotate_List/rotateRight.py" />
       </list>
     </option>
   </component>
@@ -106,7 +107,7 @@
             <path>
               <item name="Leetcode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="33Merge_Two_Sorted_Lists" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="34Rotate_List" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -433,6 +434,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-174">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/34Rotate_List/rotateRight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
         </state>
       </provider>
     </entry>
