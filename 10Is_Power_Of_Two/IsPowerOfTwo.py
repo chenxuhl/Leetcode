@@ -1,3 +1,4 @@
+#231.2的幂
 #origin:
 """
 https://leetcode-cn.com/problems/power-of-two/

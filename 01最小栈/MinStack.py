@@ -1,3 +1,5 @@
+#155.ื๎ะกีป
+
 class MinStack:
 
     def __init__(self):
