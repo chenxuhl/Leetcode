@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="313c17ef-35cb-429e-9831-2f874bc5a6d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01最小栈/MinStack.py" beforeDir="false" afterPath="$PROJECT_DIR$/01最小栈/MinStack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02有效括号/isValid.py" beforeDir="false" afterPath="$PROJECT_DIR$/02有效括号/isValid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03数组中的第K个最大元素/findKthLargest.py" beforeDir="false" afterPath="$PROJECT_DIR$/03数组中的第K个最大元素/findKthLargest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04合并K个排序列表/mergeKLists.py" beforeDir="false" afterPath="$PROJECT_DIR$/04合并K个排序列表/mergeKLists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05买卖股票的最佳时机Ⅱ/maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/05买卖股票的最佳时机Ⅱ/maxProfit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06排序链表/sortList.py" beforeDir="false" afterPath="$PROJECT_DIR$/06排序链表/sortList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07子集/subsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/07子集/subsets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08只出现一次的数字/singleNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/08只出现一次的数字/singleNumber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/09求众数/majorityElement.py" beforeDir="false" afterPath="$PROJECT_DIR$/09求众数/majorityElement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10Is_Power_Of_Two/IsPowerOfTwo.py" beforeDir="false" afterPath="$PROJECT_DIR$/10Is_Power_Of_Two/IsPowerOfTwo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11Maximum_Depth_of_Binary_Tree/maxDepth.py" beforeDir="false" afterPath="$PROJECT_DIR$/11Maximum_Depth_of_Binary_Tree/maxDepth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12Binary_Tree_Maximum_Path_Sum/maxPathSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/12Binary_Tree_Maximum_Path_Sum/maxPathSum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/13Kth_Smallest_Element_in_a_BST/kthSmallest.py" beforeDir="false" afterPath="$PROJECT_DIR$/13Kth_Smallest_Element_in_a_BST/kthSmallest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14Lowest_Common_Ancestor_of_a_Binary_Search_Tree/lowestCommonAncestor.py" beforeDir="false" afterPath="$PROJECT_DIR$/14Lowest_Common_Ancestor_of_a_Binary_Search_Tree/lowestCommonAncestor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15Lowest_Common_Ancestor_of_a_Binary_Tree/LowestCommonAncestor.py" beforeDir="false" afterPath="$PROJECT_DIR$/15Lowest_Common_Ancestor_of_a_Binary_Tree/LowestCommonAncestor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/37Sort_List/sortList.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Q.txt" afterDir="false" />
-    </list>
+    <list default="true" id="313c17ef-35cb-429e-9831-2f874bc5a6d1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +11,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/37Longest_Palindromic_Substring/longestPalindrome.py">
+        <entry file="file://$PROJECT_DIR$/46Longest_Common_Prefix/longestCommonPrefix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+            <state relative-caret-position="459">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -98,10 +79,11 @@
         <option value="$PROJECT_DIR$/45Reverse_String/reversesString.py" />
         <option value="$PROJECT_DIR$/06排序链表/sortList.py" />
         <option value="$PROJECT_DIR$/37Longest_Palindromic_Substring/longestPalindrome.py" />
+        <option value="$PROJECT_DIR$/46Longest_Common_Prefix/longestCommonPrefix.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="94" />
     <option name="y" value="165" />
     <option name="width" value="1382" />
@@ -125,12 +107,7 @@
             <path>
               <item name="Leetcode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="37Longest_Palindromic_Substring" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Leetcode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="45Reverse_String" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="46Longest_Common_Prefix" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -230,7 +207,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/09求众数/test.py" />
     <entry file="file://$PROJECT_DIR$/08只出现一次的数字/singleNumber.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -553,8 +529,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/37Longest_Palindromic_Substring/longestPalindrome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+        <state relative-caret-position="139">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/46Longest_Common_Prefix/longestCommonPrefix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
         </state>
       </provider>
     </entry>
