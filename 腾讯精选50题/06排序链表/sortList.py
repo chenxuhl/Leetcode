@@ -52,7 +52,7 @@ class Solution:
         cur = res
         while (l1 and l2):
             if l1.val > l2.val:
-                cur.next = l2   #这里试过ListNode(l2.val),执行时间竟然会翻倍
+                cur.next = l2   #这里试过cur.next = ListNode(l2.val),执行时间竟然会翻倍
                 l2 = l2.next
             else:
                 cur.next = l1
