@@ -1,2 +1,2 @@
 # Leetcode
-# some coding excise
+some coding excise
