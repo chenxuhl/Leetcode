@@ -1,2 +1,2 @@
 # Leetcode
-some coding excise
+LeetCode 刷题记录
