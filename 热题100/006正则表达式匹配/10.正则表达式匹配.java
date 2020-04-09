@@ -148,6 +148,8 @@ class Solution {
 /**
 解题思路：参考链接：https://www.youtube.com/watch?v=EdWzV-9lQMw
 动态规划方法
+时间复杂度：O(m*n)
+空间复杂度：O(m*n)
 **/
 /**
 执行结果：
@@ -160,12 +162,13 @@ class Solution {
         boolean[][] dp = new boolean[m + 1][n + 1];
         dp[0][0] = true;  //两个空串匹配
 		
-		//初始化 ,若没有这部分 如：s=aa ,p=a* 结果将为不匹配。(p当中包含*的部分，能不能匹配一个空串)
+		//初始化 ,若没有这部分 如：s=aa ,p=a* 结果将为不匹配。(可理解为：p当中包含*的部分，能不能匹配一个空串)
         for (int i = 2; i <= n; i++) {
             if (p.charAt(i - 1) == '*') {
                 dp[0][i] = dp[0][i - 2];
             }
         }
+		//主体部分
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 char sc = s.charAt(i - 1); //i,j表示位数，比下标多一
@@ -173,10 +176,10 @@ class Solution {
                 
                 if (sc == pc || pc == '.') {
                     dp[i][j] = dp[i - 1][j - 1];
-                } else if (pc == '*') {
-                    if (dp[i][j - 2]) {
+                } else if (pc == '*') { //两种情况
+                    if (dp[i][j - 2]) { //重复前面的字符
                         dp[i][j] = true;
-                    } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') {
+                    } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') { //处理如s=aaaa, p=a*情况
                         dp[i][j] = dp[i -1][j];
                     }
                 }
