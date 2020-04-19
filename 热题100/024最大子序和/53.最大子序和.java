@@ -28,3 +28,15 @@
 执行用时 :1 ms, 在所有 Java 提交中击败了96.69%的用户
 内存消耗 :39.4 MB, 在所有 Java 提交中击败了41.57%的用户
 **/
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int res = nums[0], curmax = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            curmax = Math.max(curmax + nums[i], nums[i]);
+            res = Math.max(res, curmax);
+        }
+        return res;
+
+    }
+}
