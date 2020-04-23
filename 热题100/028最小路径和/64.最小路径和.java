@@ -67,3 +67,24 @@ class Solution {
 
     }
 }
+
+//简化版
+class Solution {
+    public int minPathSum(int[][] grid) {
+        //判断是否为空
+        int m = grid.length;  //行
+        int n = grid[0].length;  //列
+        //存放结果
+        int[][] res = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 && j == 0) res[i][j] = grid[i][j];
+                else if (i == 0 && j != 0) res[i][j] = res[i][j-1] + grid[i][j];
+                else if (i != 0 && j == 0) res[i][j] = res[i-1][j] + grid[i][j];
+                else res[i][j] = Math.min(res[i-1][j], res[i][j-1]) + grid[i][j];
+            }
+        }
+        return res[m-1][n-1];
+
+    }
+}
