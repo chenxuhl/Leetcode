@@ -50,3 +50,46 @@ class Solution {
         }
     }
 }
+
+//方法二：使用三指针一次遍历完成排序
+
+/**
+ *解题思路：三个指针curr，p0， p2初始分别指向数组头，和数组末尾
+ * p0：终点为0的最右
+ * p2：终点为2的最左
+ * curr：当前遍历位置
+ * 当curr > p2则遍历结束
+ */
+
+/**
+ *执行结果：
+ * 执行用时 :0 ms, 在所有 Java 提交中击败了100.00%的用户
+ * 内存消耗 :38.2 MB, 在所有 Java 提交中击败了6.67%的用户
+ */
+
+class Solution {
+    public void sortColors(int[] nums) {
+        int n = nums.length;  //数组长度
+        int p0 = 0, p2 = n -1, curr = 0;  //初始化位置
+        while (curr <= p2) {  //遍历终止条件
+            if (nums[curr] == 2) {   //数字2放最右,并将p2左移一位
+                swap(nums, curr, p2);
+                p2--;
+            }
+            else if (nums[curr] == 1) curr++;  //数字1位置不变
+            else {  //数字0放最左，并将p0，curr共同右移一位
+                swap(nums, curr, p0);
+                p0++;
+                curr++;
+            }
+        }
+    }
+
+    //交换数组中数位置
+    private void swap(int[] nums, int a, int b) {
+        int temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
+    }
+}
+

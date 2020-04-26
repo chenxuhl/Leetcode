@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfe907d8-cb7b-4931-b004-2b4168781850" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/031颜色分类/75.颜色分类.java" beforeDir="false" afterPath="$PROJECT_DIR$/031颜色分类/75.颜色分类.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../腾讯精选50题/Q.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../腾讯精选50题/Q.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +48,7 @@
       <updated>1574085038947</updated>
       <workItem from="1587718386738" duration="302000" />
       <workItem from="1587817310480" duration="1596000" />
+      <workItem from="1587888103645" duration="539000" />
     </task>
     <servers />
   </component>
