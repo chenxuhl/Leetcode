@@ -1,64 +1,64 @@
 /**
-46.È«ÅÅÁÐ
-¸ø¶¨Ò»¸ö Ã»ÓÐÖØ¸´ Êý×ÖµÄÐòÁÐ£¬·µ»ØÆäËùÓÐ¿ÉÄÜµÄÈ«ÅÅÁÐ¡£
-
-Ê¾Àý:
-
-ÊäÈë: [1,2,3]
-Êä³ö:
-[
-  [1,2,3],
-  [1,3,2],
-  [2,1,3],
-  [2,3,1],
-  [3,1,2],
-  [3,2,1]
-]
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/permutations
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 46.È«ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ Ã»ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½Üµï¿½È«ï¿½ï¿½ï¿½Ð¡ï¿½
+ * <p>
+ * Ê¾ï¿½ï¿½:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: [1,2,3]
+ * ï¿½ï¿½ï¿½:
+ * [
+ * [1,2,3],
+ * [1,3,2],
+ * [2,1,3],
+ * [2,3,1],
+ * [3,1,2],
+ * [3,2,1]
+ * ]
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/permutations
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ **/
 
 //Java 
-//- * - coding£ºutf-8 - * -
+//- * - codingï¿½ï¿½utf-8 - * -
 //Author:JoeyChen
 //Data:2020/04/17
 
-//·½·¨Ò»£º»ØËÝ·¨
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý·ï¿½
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :2 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË78.96%µÄÓÃ»§
-ÄÚ´æÏûºÄ :40.3 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË7.32%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :2 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½78.96%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :40.3 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½7.32%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
-  public void backtrack(int n,
-                        ArrayList<Integer> nums,
-                        List<List<Integer>> output,
-                        int first) {
-    // µÝ¹é³ö¿Ú
-    if (first == n)
-      output.add(new ArrayList<Integer>(nums));
-    for (int i = first; i < n; i++) {
-      Collections.swap(nums, first, i);
-      backtrack(n, nums, output, first + 1);
-	  //»¹Ô­
-      Collections.swap(nums, first, i);
+    public void backtrack(int n,
+                          ArrayList<Integer> nums,
+                          List<List<Integer>> output,
+                          int first) {
+        // ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½
+        if (first == n)
+            output.add(new ArrayList<Integer>(nums));
+        for (int i = first; i < n; i++) {
+            Collections.swap(nums, first, i);
+            backtrack(n, nums, output, first + 1);
+            //ï¿½ï¿½Ô­
+            Collections.swap(nums, first, i);
+        }
     }
-  }
 
-  public List<List<Integer>> permute(int[] nums) {
-    List<List<Integer>> output = new LinkedList();
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> output = new LinkedList();
 
-    // ½«Êý×é×ª»¯³ÉÁÐ±í
-    ArrayList<Integer> nums_lst = new ArrayList<Integer>();
-    for (int num : nums)
-      nums_lst.add(num);
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
+        ArrayList<Integer> nums_lst = new ArrayList<Integer>();
+        for (int num : nums)
+            nums_lst.add(num);
 
-    int n = nums.length;
-    backtrack(n, nums_lst, output, 0);
-    return output;
-  }
+        int n = nums.length;
+        backtrack(n, nums_lst, output, 0);
+        return output;
+    }
 }

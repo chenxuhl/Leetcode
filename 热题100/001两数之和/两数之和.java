@@ -1,45 +1,47 @@
 /**
-1.Á½ÊýÖ®ºÍ
-ÌâÄ¿ÃèÊö£º
-¸ø¶¨Ò»¸öÕûÊýÊý×é nums?ºÍÒ»¸öÄ¿±êÖµ target£¬ÇëÄãÔÚ¸ÃÊý×éÖÐÕÒ³öºÍÎªÄ¿±êÖµµÄÄÇ?Á½¸ö?ÕûÊý£¬²¢·µ»ØËûÃÇµÄÊý×éÏÂ±ê¡£
-
-Äã¿ÉÒÔ¼ÙÉèÃ¿ÖÖÊäÈëÖ»»á¶ÔÓ¦Ò»¸ö´ð°¸¡£µ«ÊÇ£¬Äã²»ÄÜÖØ¸´ÀûÓÃÕâ¸öÊý×éÖÐÍ¬ÑùµÄÔªËØ¡£
-
-Ê¾Àý:
-
-¸ø¶¨ nums = [2, 7, 11, 15], target = 9
-
-ÒòÎª nums[0] + nums[1] = 2 + 7 = 9
-ËùÒÔ·µ»Ø [0, 1]
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/two-sum
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 1.ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½
+ * ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ nums?ï¿½ï¿½Ò»ï¿½ï¿½Ä¿ï¿½ï¿½Öµ targetï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ÎªÄ¿ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ê¡£
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½Ó¦Ò»ï¿½ï¿½ï¿½ð°¸¡ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ã²»ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¡ï¿½
+ * <p>
+ * Ê¾ï¿½ï¿½:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½ nums = [2, 7, 11, 15], target = 9
+ * <p>
+ * ï¿½ï¿½Îª nums[0] + nums[1] = 2 + 7 = 9
+ * ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ [0, 1]
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/two-sum
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½Ä¿ï¿½ï¿½Öµï¿½Í¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mapï¿½ï¿½ÉµÃ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ **/
 
 /**
-·ÖÎö£ºÖ»ÐèÒª½«Ä¿±êÖµºÍ¸ø¶¨Êý×éÖÐÖµÏà¼õ£¬²¢ÀûÓÃmap±ã¿ÉµÃ³ö½á¹û¡£
-**/
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½Ä¿ï¿½ï¿½Öµï¿½Í¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mapï¿½ï¿½ÉµÃ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ **/
 
 //Java 
-//- * - coding£ºutf-8 - * -
+//- * - codingï¿½ï¿½utf-8 - * -
 //Author:JoeyChen
 //Data:2020/04/01
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :2 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË99.58%µÄÓÃ»§
-ÄÚ´æÏûºÄ :40.3 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË5.10%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :2 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½99.58%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :40.3 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½5.10%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        int [] res = new int[2];
+        int[] res = new int[2];
         for (int i = 0, len = nums.length; i < len; ++i) {
             if (map.containsKey(target - nums[i])) {
-                return new int[]{map.get(target-nums[i]), i};
-            } else{
+                return new int[]{map.get(target - nums[i]), i};
+            } else {
                 map.put(nums[i], i);
             }
         }

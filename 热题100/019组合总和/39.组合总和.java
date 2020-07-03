@@ -1,68 +1,68 @@
 /**
-39.×éºÏ×ÜºÍ
-¸ø¶¨Ò»¸öÎÞÖØ¸´ÔªËØµÄÊý×é?candidates?ºÍÒ»¸öÄ¿±êÊý?target?£¬ÕÒ³ö?candidates?ÖÐËùÓÐ¿ÉÒÔÊ¹Êý×ÖºÍÎª?target?µÄ×éºÏ¡£
-
-candidates?ÖÐµÄÊý×Ö¿ÉÒÔÎÞÏÞÖÆÖØ¸´±»Ñ¡È¡¡£
-
-ËµÃ÷£º
-
-ËùÓÐÊý×Ö£¨°üÀ¨?target£©¶¼ÊÇÕýÕûÊý¡£
-½â¼¯²»ÄÜ°üº¬ÖØ¸´µÄ×éºÏ¡£?
-Ê¾Àý?1:
-
-ÊäÈë: candidates = [2,3,6,7], target = 7,
-ËùÇó½â¼¯Îª:
-[
-  [7],
-  [2,2,3]
-]
-Ê¾Àý?2:
-
-ÊäÈë: candidates = [2,3,5], target = 8,
-ËùÇó½â¼¯Îª:
-[
-? [2,2,2,2],
-? [2,3,3],
-? [3,5]
-]
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/combination-sum
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 39.ï¿½ï¿½ï¿½ï¿½Üºï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½?candidates?ï¿½ï¿½Ò»ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½?target?ï¿½ï¿½ï¿½Ò³ï¿½?candidates?ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Öºï¿½Îª?target?ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½
+ * <p>
+ * candidates?ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ö¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½Ñ¡È¡ï¿½ï¿½
+ * <p>
+ * Ëµï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½?targetï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½â¼¯ï¿½ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½?
+ * Ê¾ï¿½ï¿½?1:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: candidates = [2,3,6,7], target = 7,
+ * ï¿½ï¿½ï¿½ï¿½â¼¯Îª:
+ * [
+ * [7],
+ * [2,2,3]
+ * ]
+ * Ê¾ï¿½ï¿½?2:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: candidates = [2,3,5], target = 8,
+ * ï¿½ï¿½ï¿½ï¿½â¼¯Îª:
+ * [
+ * ? [2,2,2,2],
+ * ? [2,3,3],
+ * ? [3,5]
+ * ]
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/combination-sum
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ **/
 
 //Java
 //-*- coding:utf-8 -*-
 //JoeyChen
 //2020/04/15
 
-//·½·¨Ò»£ºÏÈÅÅÐò£¬È»ºóµÝ¹é
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½Ý¹ï¿½
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :3 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË93.98%µÄÓÃ»§
-ÄÚ´æÏûºÄ :40.2 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË9.43%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :3 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½93.98%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :40.2 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½9.43%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);
-        getAnswers(res,candidates,target,new ArrayList<>(),0);
+        getAnswers(res, candidates, target, new ArrayList<>(), 0);
         return res;
     }
 
     public void getAnswers(List<List<Integer>> res, int[] candidates, int target,
-                                   List<Integer> tempList,int index) {
+                           List<Integer> tempList, int index) {
         if (target == 0) {
             res.add(tempList);
             return;
         }
         for (int i = index; i < candidates.length; i++) {
-            if (candidates[i]<=target) {
-                List<Integer> list=new ArrayList<>(tempList);
+            if (candidates[i] <= target) {
+                List<Integer> list = new ArrayList<>(tempList);
                 list.add(candidates[i]);
-                getAnswers(res,candidates,target-candidates[i],list,i);
+                getAnswers(res, candidates, target - candidates[i], list, i);
             } else {
                 break;
             }

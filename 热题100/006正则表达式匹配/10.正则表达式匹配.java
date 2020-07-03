@@ -1,113 +1,115 @@
 /**
-10.ÕýÔò±í´ïÊ½Æ¥Åä
-¸øÄãÒ»¸ö×Ö·û´®?s?ºÍÒ»¸ö×Ö·û¹æÂÉ?p£¬ÇëÄãÀ´ÊµÏÖÒ»¸öÖ§³Ö '.'?ºÍ?'*'?µÄÕýÔò±í´ïÊ½Æ¥Åä¡£
-
-'.' Æ¥ÅäÈÎÒâµ¥¸ö×Ö·û
-'*' Æ¥ÅäÁã¸ö»ò¶à¸öÇ°ÃæµÄÄÇÒ»¸öÔªËØ
-ËùÎ½Æ¥Åä£¬ÊÇÒªº­¸Ç?Õû¸ö?×Ö·û´®?sµÄ£¬¶ø²»ÊÇ²¿·Ö×Ö·û´®¡£
-
-ËµÃ÷:
-
-s?¿ÉÄÜÎª¿Õ£¬ÇÒÖ»°üº¬´Ó?a-z?µÄÐ¡Ð´×ÖÄ¸¡£
-p?¿ÉÄÜÎª¿Õ£¬ÇÒÖ»°üº¬´Ó?a-z?µÄÐ¡Ð´×ÖÄ¸£¬ÒÔ¼°×Ö·û?.?ºÍ?*¡£
-Ê¾Àý 1:
-
-ÊäÈë:
-s = "aa"
-p = "a"
-Êä³ö: false
-½âÊÍ: "a" ÎÞ·¨Æ¥Åä "aa" Õû¸ö×Ö·û´®¡£
-Ê¾Àý 2:
-
-ÊäÈë:
-s = "aa"
-p = "a*"
-Êä³ö: true
-½âÊÍ:?ÒòÎª '*' ´ú±í¿ÉÒÔÆ¥ÅäÁã¸ö»ò¶à¸öÇ°ÃæµÄÄÇÒ»¸öÔªËØ, ÔÚÕâÀïÇ°ÃæµÄÔªËØ¾ÍÊÇ 'a'¡£Òò´Ë£¬×Ö·û´® "aa" ¿É±»ÊÓÎª 'a' ÖØ¸´ÁËÒ»´Î¡£
-Ê¾Àý?3:
-
-ÊäÈë:
-s = "ab"
-p = ".*"
-Êä³ö: true
-½âÊÍ:?".*" ±íÊ¾¿ÉÆ¥ÅäÁã¸ö»ò¶à¸ö£¨'*'£©ÈÎÒâ×Ö·û£¨'.'£©¡£
-Ê¾Àý 4:
-
-ÊäÈë:
-s = "aab"
-p = "c*a*b"
-Êä³ö: true
-½âÊÍ:?ÒòÎª '*' ±íÊ¾Áã¸ö»ò¶à¸ö£¬ÕâÀï 'c' Îª 0 ¸ö, 'a' ±»ÖØ¸´Ò»´Î¡£Òò´Ë¿ÉÒÔÆ¥Åä×Ö·û´® "aab"¡£
-Ê¾Àý 5:
-
-ÊäÈë:
-s = "mississippi"
-p = "mis*is*p*."
-Êä³ö: false
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/regular-expression-matching
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 10.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Æ¥ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½?s?ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½?pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ò»ï¿½ï¿½Ö§ï¿½ï¿½ '.'?ï¿½ï¿½?'*'?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Æ¥ï¿½ä¡£
+ * <p>
+ * '.' Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½âµ¥ï¿½ï¿½ï¿½Ö·ï¿½
+ * '*' Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
+ * ï¿½ï¿½Î½Æ¥ï¿½ä£¬ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½?ï¿½Ö·ï¿½ï¿½ï¿½?sï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * Ëµï¿½ï¿½:
+ * <p>
+ * s?ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?a-z?ï¿½ï¿½Ð¡Ð´ï¿½ï¿½Ä¸ï¿½ï¿½
+ * p?ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?a-z?ï¿½ï¿½Ð¡Ð´ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ö·ï¿½?.?ï¿½ï¿½?*ï¿½ï¿½
+ * Ê¾ï¿½ï¿½ 1:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½:
+ * s = "aa"
+ * p = "a"
+ * ï¿½ï¿½ï¿½: false
+ * ï¿½ï¿½ï¿½ï¿½: "a" ï¿½Þ·ï¿½Æ¥ï¿½ï¿½ "aa" ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
+ * Ê¾ï¿½ï¿½ 2:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½:
+ * s = "aa"
+ * p = "a*"
+ * ï¿½ï¿½ï¿½: true
+ * ï¿½ï¿½ï¿½ï¿½:?ï¿½ï¿½Îª '*' ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ôªï¿½Ø¾ï¿½ï¿½ï¿½ 'a'ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ "aa" ï¿½É±ï¿½ï¿½ï¿½Îª 'a' ï¿½Ø¸ï¿½ï¿½ï¿½Ò»ï¿½Î¡ï¿½
+ * Ê¾ï¿½ï¿½?3:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½:
+ * s = "ab"
+ * p = ".*"
+ * ï¿½ï¿½ï¿½: true
+ * ï¿½ï¿½ï¿½ï¿½:?".*" ï¿½ï¿½Ê¾ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'*'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½'.'ï¿½ï¿½ï¿½ï¿½
+ * Ê¾ï¿½ï¿½ 4:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½:
+ * s = "aab"
+ * p = "c*a*b"
+ * ï¿½ï¿½ï¿½: true
+ * ï¿½ï¿½ï¿½ï¿½:?ï¿½ï¿½Îª '*' ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 'c' Îª 0 ï¿½ï¿½, 'a' ï¿½ï¿½ï¿½Ø¸ï¿½Ò»ï¿½Î¡ï¿½ï¿½ï¿½Ë¿ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ "aab"ï¿½ï¿½
+ * Ê¾ï¿½ï¿½ 5:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½:
+ * s = "mississippi"
+ * p = "mis*is*p*."
+ * ï¿½ï¿½ï¿½: false
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/regular-expression-matching
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ **/
 
 //Java 
-//- * - coding£ºutf-8 - * -
+//- * - codingï¿½ï¿½utf-8 - * -
 //Author:JoeyChen
 //Data:2020/04/06
 
-//·½·¨Ò»£º
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :82 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË27.83%µÄÓÃ»§
-ÄÚ´æÏûºÄ :40.1 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË23.78%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :82 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½27.83%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :40.1 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½23.78%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;
         int n = nums2.length;
-        if (m>n) {
-            int[] temp = nums1;nums1 = nums2;nums2 = temp;
-            int templenght = m; m = n;n = templenght;
+        if (m > n) {
+            int[] temp = nums1;
+            nums1 = nums2;
+            nums2 = temp;
+            int templenght = m;
+            m = n;
+            n = templenght;
         }
-        int imin = 0,imax = m,half = (m+n+1)/2;
-        while (imin<=imax) {
-            int i = (imax+imin)/2;
-            int j = half-i;
-            //i¹ýÐ¡ÇÒi¿ÉÒÔÔÙÔö´ó
-            if(i<imax && nums2[j-1]>nums1[i]) {
+        int imin = 0, imax = m, half = (m + n + 1) / 2;
+        while (imin <= imax) {
+            int i = (imax + imin) / 2;
+            int j = half - i;
+            //iï¿½ï¿½Ð¡ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            if (i < imax && nums2[j - 1] > nums1[i]) {
                 imin = i + 1;
             }
-            //i¹ý´óÇÒi¿ÉÒÔÔÙ¼õÐ¡
-            else if(i>imin && nums1[i-1]>nums2[j]) {
+            //iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½Ù¼ï¿½Ð¡
+            else if (i > imin && nums1[i - 1] > nums2[j]) {
                 imax = i - 1;
-            }
-            else {
+            } else {
                 int leftmax = 0;
-				// left_num1Îª¿ÕÊ±
-                if(i==0) {
-                    leftmax = nums2[j-1];
+                // left_num1Îªï¿½ï¿½Ê±
+                if (i == 0) {
+                    leftmax = nums2[j - 1];
                 }
-				//left_num2Îª¿ÕÊ±
-                else if(j==0) {
-                    leftmax = nums1[i-1];
+                //left_num2Îªï¿½ï¿½Ê±
+                else if (j == 0) {
+                    leftmax = nums1[i - 1];
+                } else {
+                    leftmax = Math.max(nums1[i - 1], nums2[j - 1]);
                 }
-                else {
-                    leftmax = Math.max(nums1[i-1],nums2[j-1]);
-                }
-                if((m+n)%2 == 1) return leftmax;
+                if ((m + n) % 2 == 1) return leftmax;
 
                 int rightmin = 0;
-				 // right_num1Îª¿ÕÊ±
-                if(i==m) {
+                // right_num1Îªï¿½ï¿½Ê±
+                if (i == m) {
                     rightmin = nums2[j];
                 }
-				 // right_num2Îª¿ÕÊ±
-                else if(j==n) {
+                // right_num2Îªï¿½ï¿½Ê±
+                else if (j == n) {
                     rightmin = nums1[i];
-                }
-                else {
-                    rightmin = Math.min(nums1[i],nums2[j]);
+                } else {
+                    rightmin = Math.min(nums1[i], nums2[j]);
                 }
                 return (leftmax + rightmin) / 2.0;
             }
@@ -117,70 +119,72 @@ class Solution {
     }
 }
 
-//·½·¨¶þ£º
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 /**
-½âÌâË¼Â·£º²Î¿¼Á´½Ó£ºhttps://www.youtube.com/watch?v=EdWzV-9lQMw
-µÝ¹é·½·¨
-**/
+ ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½Ó£ï¿½https://www.youtube.com/watch?v=EdWzV-9lQMw
+ ï¿½Ý¹é·½ï¿½ï¿½
+ **/
+
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :102 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË15.32%µÄÓÃ»§
-ÄÚ´æÏûºÄ :40.5 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË23.47%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :102 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½15.32%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :40.5 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½23.47%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 class Solution {
     public boolean isMatch(String s, String p) {
         if (p.length() == 0) return s.length() == 0;
 
         boolean firstMatch = s.length() > 0 && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.');
 
-		//ÌØÊâÇé¿öÏÂ
-        if (p.length() >= 2 && p.charAt(1) == '*') { //ÄÑµã£¬ÌØÊâÇé¿öÏÂÁ½ÖÖÇé¿ö£ºPÇ°Á½Î»²»Æ¥Åä£»pµÚÒ»Î»Æ¥Åä---Èç£ºs=aaaaaa, p=a*
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (p.length() >= 2 && p.charAt(1) == '*') { //ï¿½Ñµã£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PÇ°ï¿½ï¿½Î»ï¿½ï¿½Æ¥ï¿½ä£»pï¿½ï¿½Ò»Î»Æ¥ï¿½ï¿½---ï¿½ç£ºs=aaaaaa, p=a*
             return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));
-        } 
-		//Ò»°ãÇé¿öÏÂ
-		else {
+        }
+        //Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        else {
             return firstMatch && isMatch(s.substring(1), p.substring(1));
         }
     }
 }
 
-//·½·¨Èý£º
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 /**
-½âÌâË¼Â·£º²Î¿¼Á´½Ó£ºhttps://www.youtube.com/watch?v=EdWzV-9lQMw
-¶¯Ì¬¹æ»®·½·¨
-Ê±¼ä¸´ÔÓ¶È£ºO(m*n)
-¿Õ¼ä¸´ÔÓ¶È£ºO(m*n)
-**/
+ ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½Ó£ï¿½https://www.youtube.com/watch?v=EdWzV-9lQMw
+ ï¿½ï¿½Ì¬ï¿½æ»®ï¿½ï¿½ï¿½ï¿½
+ Ê±ï¿½ä¸´ï¿½Ó¶È£ï¿½O(m*n)
+ ï¿½Õ¼ä¸´ï¿½Ó¶È£ï¿½O(m*n)
+ **/
+
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :4 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË77.09%µÄÓÃ»§
-ÄÚ´æÏûºÄ :39.6 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË24.69%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :4 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½77.09%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :39.6 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½24.69%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 class Solution {
     public boolean isMatch(String s, String p) {
         int m = s.length(), n = p.length();
         boolean[][] dp = new boolean[m + 1][n + 1];
-        dp[0][0] = true;  //Á½¸ö¿Õ´®Æ¥Åä
-		
-		//³õÊ¼»¯ ,ÈôÃ»ÓÐÕâ²¿·Ö Èç£ºs=aa ,p=a* ½á¹û½«Îª²»Æ¥Åä¡£(¿ÉÀí½âÎª£ºpµ±ÖÐ°üº¬*µÄ²¿·Ö£¬ÄÜ²»ÄÜÆ¥ÅäÒ»¸ö¿Õ´®)
+        dp[0][0] = true;  //ï¿½ï¿½ï¿½ï¿½ï¿½Õ´ï¿½Æ¥ï¿½ï¿½
+
+        //ï¿½ï¿½Ê¼ï¿½ï¿½ ,ï¿½ï¿½Ã»ï¿½ï¿½ï¿½â²¿ï¿½ï¿½ ï¿½ç£ºs=aa ,p=a* ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Æ¥ï¿½ä¡£(ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½pï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½*ï¿½Ä²ï¿½ï¿½Ö£ï¿½ï¿½Ü²ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Õ´ï¿½)
         for (int i = 2; i <= n; i++) {
             if (p.charAt(i - 1) == '*') {
                 dp[0][i] = dp[0][i - 2];
             }
         }
-		//Ö÷Ìå²¿·Ö
+        //ï¿½ï¿½ï¿½å²¿ï¿½ï¿½
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
-                char sc = s.charAt(i - 1); //i,j±íÊ¾Î»Êý£¬±ÈÏÂ±ê¶àÒ»
+                char sc = s.charAt(i - 1); //i,jï¿½ï¿½Ê¾Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½ï¿½Ò»
                 char pc = p.charAt(j - 1);
-                
+
                 if (sc == pc || pc == '.') {
                     dp[i][j] = dp[i - 1][j - 1];
-                } else if (pc == '*') { //Á½ÖÖÇé¿ö
-                    if (dp[i][j - 2]) { //ÖØ¸´Ç°ÃæµÄ×Ö·û
+                } else if (pc == '*') { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                    if (dp[i][j - 2]) { //ï¿½Ø¸ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
                         dp[i][j] = true;
-                    } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') { //´¦ÀíÈçs=aaaa, p=a*Çé¿ö
-                        dp[i][j] = dp[i -1][j];
+                    } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½s=aaaa, p=a*ï¿½ï¿½ï¿½
+                        dp[i][j] = dp[i - 1][j];
                     }
                 }
             }

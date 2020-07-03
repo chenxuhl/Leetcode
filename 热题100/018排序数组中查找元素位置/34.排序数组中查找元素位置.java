@@ -1,60 +1,62 @@
 /**
-34. ÔÚÅÅÐòÊý×éÖÐ²éÕÒÔªËØµÄµÚÒ»¸öºÍ×îºóÒ»¸öÎ»ÖÃ
-¸ø¶¨Ò»¸ö°´ÕÕÉýÐòÅÅÁÐµÄÕûÊýÊý×é nums£¬ºÍÒ»¸öÄ¿±êÖµ target¡£ÕÒ³ö¸ø¶¨Ä¿±êÖµÔÚÊý×éÖÐµÄ¿ªÊ¼Î»ÖÃºÍ½áÊøÎ»ÖÃ¡£
-
-ÄãµÄËã·¨Ê±¼ä¸´ÔÓ¶È±ØÐëÊÇ?O(log n) ¼¶±ð¡£
-
-Èç¹ûÊý×éÖÐ²»´æÔÚÄ¿±êÖµ£¬·µ»Ø?[-1, -1]¡£
-
-Ê¾Àý 1:
-
-ÊäÈë: nums = [5,7,7,8,8,10], target = 8
-Êä³ö: [3,4]
-Ê¾Àý?2:
-
-ÊäÈë: nums = [5,7,7,8,8,10], target = 6
-Êä³ö: [-1,-1]
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 34. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½Ôªï¿½ØµÄµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ numsï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ä¿ï¿½ï¿½Öµ targetï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¿ï¿½Ê¼Î»ï¿½ÃºÍ½ï¿½ï¿½ï¿½Î»ï¿½Ã¡ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½ã·¨Ê±ï¿½ä¸´ï¿½Ó¶È±ï¿½ï¿½ï¿½ï¿½ï¿½?O(log n) ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?[-1, -1]ï¿½ï¿½
+ * <p>
+ * Ê¾ï¿½ï¿½ 1:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: nums = [5,7,7,8,8,10], target = 8
+ * ï¿½ï¿½ï¿½: [3,4]
+ * Ê¾ï¿½ï¿½?2:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: nums = [5,7,7,8,8,10], target = 6
+ * ï¿½ï¿½ï¿½: [-1,-1]
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½Ö·ï¿½ï¿½Òµï¿½Ò»ï¿½ï¿½targetï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½
+ **/
 
 //Java
 //-*- coding:utf-8 -*-
 //JoeyChen
 //2020/04/14
 
-//·½·¨Ò»£º¶þ·Ö·¨
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
 
 /**
-½âÌâË¼Â·£º
-ÏÈÀûÓÃ¶þ·Ö·¨ÕÒµ½Ò»¸ötarget£¬È»ºó×óÓÒÕÒµ½±ß½çË÷Òý
-**/
+ ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½Ö·ï¿½ï¿½Òµï¿½Ò»ï¿½ï¿½targetï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½
+ **/
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :0 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË100.00%µÄÓÃ»§
-ÄÚ´æÏûºÄ :42.8 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË70.18%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :0 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½100.00%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :42.8 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½70.18%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int sign = -1;  //¼ÇÂ¼¶þ·Ö·¨ÕÒµ½targetÖµ¶ÔÓ¦numsÖÐµÄindex
+        int sign = -1;  //ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ö·ï¿½ï¿½Òµï¿½targetÖµï¿½ï¿½Ó¦numsï¿½Ðµï¿½index
         int left = 0;
         int right = nums.length;
         while (left < right) {
             int mid = (right + left) / 2;
-            //Î¨Ò»³ö¿Ú,Ò²Òª¿¼ÂÇµ½ÕÒ²»µ½Çé¿ö
+            //Î¨Ò»ï¿½ï¿½ï¿½ï¿½,Ò²Òªï¿½ï¿½ï¿½Çµï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (nums[mid] == target) {
                 sign = mid;
                 break;
-            }
-            else if (nums[mid] > target) {
-                if (mid == right) break; //ÕÒ²»µ½µÄÇé¿ö£¬±ÜÃâËÀÑ­»·
+            } else if (nums[mid] > target) {
+                if (mid == right) break; //ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
                 right = mid;
             } else {
-                if (mid == left) break;  //ÕÒ²»µ½µÄÇé¿ö
+                if (mid == left) break;  //ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 left = mid;
             }
         }
@@ -62,8 +64,8 @@ class Solution {
         if (sign == -1) return new int[]{-1, -1};
         else {
             int a = sign, b = sign;
-            while (a>0 && nums[a-1] == target) a--;
-            while (b<nums.length-1 && nums[b+1] == target) b++;  //ÕÒµ½×óÓÒ±ß½ç
+            while (a > 0 && nums[a - 1] == target) a--;
+            while (b < nums.length - 1 && nums[b + 1] == target) b++;  //ï¿½Òµï¿½ï¿½ï¿½ï¿½Ò±ß½ï¿½
             return new int[]{a, b};
         }
 

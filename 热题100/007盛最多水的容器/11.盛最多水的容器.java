@@ -1,46 +1,49 @@
 /**
-11.Ê¢×î¶àË®µÄÈÝÆ÷
-¸øÄã n ¸ö·Ç¸ºÕûÊý a1£¬a2£¬...£¬an£¬Ã¿¸öÊý´ú±í×ø±êÖÐµÄÒ»¸öµã?(i,?ai) ¡£ÔÚ×ø±êÄÚ»­ n Ìõ´¹Ö±Ïß£¬´¹Ö±Ïß i?µÄÁ½¸ö¶Ëµã·Ö±ðÎª?(i,?ai) ºÍ (i, 0)¡£ÕÒ³öÆäÖÐµÄÁ½ÌõÏß£¬Ê¹µÃËüÃÇÓë?x?Öá¹²Í¬¹¹³ÉµÄÈÝÆ÷¿ÉÒÔÈÝÄÉ×î¶àµÄË®¡£
-
-ËµÃ÷£ºÄã²»ÄÜÇãÐ±ÈÝÆ÷£¬ÇÒ?n?µÄÖµÖÁÉÙÎª 2¡£
-
-´¹Ö±Ïß´ú±íÊäÈëÊý×é [1,8,6,2,5,4,8,3,7]¡£ÔÚ´ËÇé¿öÏÂ£¬ÈÝÆ÷ÄÜ¹»ÈÝÄÉË®µÄ×î´óÖµÎª?49¡£
-
-
-Ê¾Àý£º
-
-ÊäÈë£º[1,8,6,2,5,4,8,3,7]
-Êä³ö£º49
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/container-with-most-water
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 11.Ê¢ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ n ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ a1ï¿½ï¿½a2ï¿½ï¿½...ï¿½ï¿½anï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ò»ï¿½ï¿½ï¿½ï¿½?(i,?ai) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ n ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ß£ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ i?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½Ö±ï¿½Îª?(i,?ai) ï¿½ï¿½ (i, 0)ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?x?ï¿½á¹²Í¬ï¿½ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½
+ * <p>
+ * Ëµï¿½ï¿½ï¿½ï¿½ï¿½ã²»ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?n?ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Îª 2ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½Ö±ï¿½ß´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [1,8,6,2,5,4,8,3,7]ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎª?49ï¿½ï¿½
+ * <p>
+ * <p>
+ * Ê¾ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ë£º[1,8,6,2,5,4,8,3,7]
+ * ï¿½ï¿½ï¿½ï¿½ï¿½49
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/container-with-most-water
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ * Ñ­ï¿½ï¿½Ç¶ï¿½ï¿½
+ **/
 
 //Java 
-//- * - coding£ºutf-8 - * -
+//- * - codingï¿½ï¿½utf-8 - * -
 //Author:JoeyChen
 //Data:2020/04/07
 
-//·½·¨Ò»£»±©Á¦½âÌâ
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 /**
-½âÌâË¼Â·£º
-Ñ­»·Ç¶Ì×
-**/
+ ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ Ñ­ï¿½ï¿½Ç¶ï¿½ï¿½
+ **/
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :848 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË5.04%µÄÓÃ»§
-ÄÚ´æÏûºÄ :40.3 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË19.05%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :848 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½5.04%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :40.3 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½19.05%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public int maxArea(int[] height) {
-        //±©Á¦½â·¨
-        if (height == null || height.length<= 1) return 0;
+        //ï¿½ï¿½ï¿½ï¿½ï¿½â·¨
+        if (height == null || height.length <= 1) return 0;
         int maxArea = 0;
-        for (int i = 0; i < height.length -1; i ++) {
-            for (int j = i + 1; j < height.length; j ++) {
+        for (int i = 0; i < height.length - 1; i++) {
+            for (int j = i + 1; j < height.length; j++) {
                 maxArea = Math.max(maxArea, Math.min(height[i], height[j]) * (j - i));
             }
 
@@ -50,17 +53,17 @@ class Solution {
     }
 }
 
-//·½·¨¶þ£ºË«Ö¸Õë
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë«Ö¸ï¿½ï¿½
 /**
-½âÌâË¼Â·£º
-	ÀûÓÃË«Ö¸Õë·Ö±ðÖ¸ÏòÊý×éÊ×Î²£¬²¢°´ÕÕ½«Ö¸Ïò½Ï¶ÌÏß¶ÎµÄÖ¸ÕëÏò½Ï³¤Ïß¶ÎµÄÄÇ¶ËÒÆ¶¯¡£
-**/
+ ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ ï¿½ï¿½ï¿½ï¿½Ë«Ö¸ï¿½ï¿½Ö±ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½Ö¸ï¿½ï¿½Ï¶ï¿½ï¿½ß¶Îµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ï³ï¿½ï¿½ß¶Îµï¿½ï¿½Ç¶ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½
+ **/
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :4 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË75.52%µÄÓÃ»§
-ÄÚ´æÏûºÄ :39.9 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË64.44%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :4 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½75.52%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :39.9 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½64.44%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public int maxArea(int[] height) {
@@ -71,9 +74,9 @@ class Solution {
         while (left < right) {
             maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
             if (height[left] < height[right]) {
-                left ++;
+                left++;
             } else {
-                right --;
+                right--;
             }
         }
         return maxArea;

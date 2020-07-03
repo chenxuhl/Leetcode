@@ -1,50 +1,50 @@
 /**
-55.ÌøÔ¾ÓÎÏ·
-¸ø¶¨Ò»¸ö·Ç¸ºÕûÊýÊý×é£¬Äã×î³õÎ»ÓÚÊý×éµÄµÚÒ»¸öÎ»ÖÃ¡£
-
-Êý×éÖÐµÄÃ¿¸öÔªËØ´ú±íÄãÔÚ¸ÃÎ»ÖÃ¿ÉÒÔÌøÔ¾µÄ×î´ó³¤¶È¡£
-
-ÅÐ¶ÏÄãÊÇ·ñÄÜ¹»µ½´ï×îºóÒ»¸öÎ»ÖÃ¡£
-
-Ê¾Àý?1:
-
-ÊäÈë: [2,3,1,1,4]
-Êä³ö: true
-½âÊÍ: ÎÒÃÇ¿ÉÒÔÏÈÌø 1 ²½£¬´ÓÎ»ÖÃ 0 µ½´ï Î»ÖÃ 1, È»ºóÔÙ´ÓÎ»ÖÃ 1 Ìø 3 ²½µ½´ï×îºóÒ»¸öÎ»ÖÃ¡£
-Ê¾Àý?2:
-
-ÊäÈë: [3,2,1,0,4]
-Êä³ö: false
-½âÊÍ: ÎÞÂÛÔõÑù£¬Äã×Ü»áµ½´ïË÷ÒýÎª 3 µÄÎ»ÖÃ¡£µ«¸ÃÎ»ÖÃµÄ×î´óÌøÔ¾³¤¶ÈÊÇ 0 £¬ ËùÒÔÄãÓÀÔ¶²»¿ÉÄÜµ½´ï×îºóÒ»¸öÎ»ÖÃ¡£
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/jump-game
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 55.ï¿½ï¿½Ô¾ï¿½ï¿½Ï·
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ò»ï¿½ï¿½Î»ï¿½Ã¡ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ã¿ï¿½ï¿½Ôªï¿½Ø´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½Î»ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½ó³¤¶È¡ï¿½
+ * <p>
+ * ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½Ã¡ï¿½
+ * <p>
+ * Ê¾ï¿½ï¿½?1:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: [2,3,1,1,4]
+ * ï¿½ï¿½ï¿½: true
+ * ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ Î»ï¿½ï¿½ 1, È»ï¿½ï¿½ï¿½Ù´ï¿½Î»ï¿½ï¿½ 1 ï¿½ï¿½ 3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½Ã¡ï¿½
+ * Ê¾ï¿½ï¿½?2:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: [3,2,1,0,4]
+ * ï¿½ï¿½ï¿½: false
+ * ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü»áµ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª 3 ï¿½ï¿½Î»ï¿½Ã¡ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½Ã¡ï¿½
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/jump-game
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ **/
 
 //Java 
-//- * - coding£ºutf-8 - * -
+//- * - codingï¿½ï¿½utf-8 - * -
 //Author:JoeyChen
 //Data:2020/04/20
 
-//·½·¨Ò»£ºÌ°ÐÄ·¨
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ì°ï¿½Ä·ï¿½
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :2 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË69.88%µÄÓÃ»§
-ÄÚ´æÏûºÄ :41.5 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË14.06%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :2 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½69.88%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :41.5 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½14.06%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public boolean canJump(int[] nums) {
-        int ultraright= 0;  //ËùÄÜµ½´ï×îÔ¶ÓÒ¶Ë
+        int ultraright = 0;  //ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½Ò¶ï¿½
         for (int i = 0; i < nums.length; i++) {
-            if (i <= ultraright) {  //iÔÚÄÜµ½´ïµÄ×îÔ¶ÓÒ¶ËÖ®ÄÚ²Å¿ÉÒÔ¼ÌÐø½øÐÐ
-                ultraright = Math.max(ultraright, i + nums[i]);  //¸üÐÂÓÒ¶Ë×îÔ¶µã
-                if (ultraright >= nums.length -1) return true;  //ÅÐ¶ÏÊÇ·ñÂú×ãÌõ¼þ£¬ÈôÂú×ãÌáÇ°½áÊøÑ­»·
+            if (i <= ultraright) {  //iï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½Ò¶ï¿½Ö®ï¿½Ú²Å¿ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                ultraright = Math.max(ultraright, i + nums[i]);  //ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½
+                if (ultraright >= nums.length - 1) return true;  //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
             }
         }
-        return false;  //Èô±éÀúÍêºóÈÔ²»Âú×ã£¬Ôò·µ»Øfalse
+        return false;  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ã£¬ï¿½ò·µ»ï¿½false
 
     }
 }

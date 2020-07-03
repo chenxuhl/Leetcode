@@ -1,34 +1,38 @@
 /**
-23.ºÏ²¢K¸öÅÅÐòÁ´±í
-ºÏ²¢?k?¸öÅÅÐòÁ´±í£¬·µ»ØºÏ²¢ºóµÄÅÅÐòÁ´±í¡£Çë·ÖÎöºÍÃèÊöËã·¨µÄ¸´ÔÓ¶È¡£
-
-Ê¾Àý:
-
-ÊäÈë:
-[
-? 1->4->5,
-? 1->3->4,
-? 2->6
-]
-Êä³ö: 1->1->2->3->4->4->5->6
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/merge-k-sorted-lists
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 23.ï¿½Ï²ï¿½Kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½Ï²ï¿½?k?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØºÏ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½Ä¸ï¿½ï¿½Ó¶È¡ï¿½
+ * <p>
+ * Ê¾ï¿½ï¿½:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½:
+ * [
+ * ? 1->4->5,
+ * ? 1->3->4,
+ * ? 2->6
+ * ]
+ * ï¿½ï¿½ï¿½: 1->1->2->3->4->4->5->6
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/merge-k-sorted-lists
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ * Ö´ï¿½ï¿½ï¿½ï¿½Ê± :4 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½69.28%ï¿½ï¿½ï¿½Ã»ï¿½
+ * ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :41.2 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½73.84%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 //Java
 //-*- coding:utf-8 -*-
 //JoeyChen
 //2020/04/11
 
-//·½·¨Ò»£º°ÑÊý¾Ý¶ÁÈ¡µ½ArrayList£¬ÔÙ×ªµ½Êý×éÖÐ£¬ÅÅÐòºóÖØÐÂ¹¹½¨Á´±í
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½È¡ï¿½ï¿½ArrayListï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :4 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË69.28%µÄÓÃ»§
-ÄÚ´æÏûºÄ :41.2 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË73.84%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :4 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½69.28%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :41.2 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½73.84%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 /**
  * Definition for singly-linked list.
@@ -40,42 +44,42 @@
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        ArrayList<Integer> arr=new ArrayList<>();
-        for(int i=0;i<lists.length;i++) {
-        	ListNode list=lists[i];
-        	while(list!=null) {
-        		int val=list.val;
-        		arr.add(val);
-        		list=list.next;
-        	}
-        	
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i = 0; i < lists.length; i++) {
+            ListNode list = lists[i];
+            while (list != null) {
+                int val = list.val;
+                arr.add(val);
+                list = list.next;
+            }
+
         }
-        int size=arr.size();
-        int[] data=new int[size];
-        for(int i=0;i<size;i++) {
-        	data[i]=arr.get(i);
+        int size = arr.size();
+        int[] data = new int[size];
+        for (int i = 0; i < size; i++) {
+            data[i] = arr.get(i);
         }
         Arrays.sort(data);
-        ListNode list1=new ListNode(0);
-        ListNode list2=list1;
-        for(int i=0;i<size;i++) {
-        	int m=data[i];
-        	ListNode k=new ListNode(1);
-        	k.val=m;
-        	list1.next=k;
-        	list1=list1.next;
+        ListNode list1 = new ListNode(0);
+        ListNode list2 = list1;
+        for (int i = 0; i < size; i++) {
+            int m = data[i];
+            ListNode k = new ListNode(1);
+            k.val = m;
+            list1.next = k;
+            list1 = list1.next;
         }
         return list2.next;
     }
 }
 
-//·½·¨¶þ£º²ð·Ö£¬ÀûÓÃµ½Á½¸öÓÐÐòÁ´±íºÏ²¢
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï²ï¿½
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :267 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË15.13%µÄÓÃ»§
-ÄÚ´æÏûºÄ :42.1 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË56.14%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :267 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½15.13%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :42.1 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½56.14%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 /**
  * Definition for singly-linked list.
@@ -98,7 +102,7 @@ class Solution {
             res = mergeTwoLists(lists[0], lists[1]);
         } else {
             res = mergeTwoLists(lists[0], lists[1]);
-            for (int i =2; i < lists.length; i++) {
+            for (int i = 2; i < lists.length; i++) {
                 res = mergeTwoLists(res, lists[i]);
             }
         }
@@ -108,7 +112,7 @@ class Solution {
     }
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        //µÝ¹é³ö¿Ú
+        //ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½
         if (list1 == null) return list2;
         if (list2 == null) return list1;
 
@@ -124,13 +128,13 @@ class Solution {
     }
 }
 
-//·½·¨Èý£ºÓÅÏÈ¶ÓÁÐ£¬Ïà±ÈÓÚ·½·¨Ò»£¬ÉÙÁËÅÅÐò²½Öè
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¶ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 /**
-Ö´ÐÐ½á¹û£»
-Ö´ÐÐÓÃÊ± :7 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË49.66%µÄÓÃ»§
-ÄÚ´æÏûºÄ :41.4 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË72.37%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :7 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½49.66%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :41.4 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½72.37%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 /**
  * Definition for singly-linked list.
@@ -142,19 +146,19 @@ class Solution {
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-       if(lists == null || lists.length < 0){
-           return null;
-       }
+        if (lists == null || lists.length < 0) {
+            return null;
+        }
         PriorityQueue<Integer> queue = new PriorityQueue();
-        for(ListNode node:lists){
-            while(node != null){
+        for (ListNode node : lists) {
+            while (node != null) {
                 queue.add(node.val);
                 node = node.next;
             }
         }
         ListNode res = new ListNode(0);
-        ListNode tmp= res;
-        while(!queue.isEmpty()){
+        ListNode tmp = res;
+        while (!queue.isEmpty()) {
             ListNode temp = new ListNode(queue.poll());
             tmp.next = temp;
             tmp = tmp.next;

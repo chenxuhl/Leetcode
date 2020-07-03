@@ -1,58 +1,61 @@
 /**
-15.ÈýÊýÖ®ºÍ
-¸øÄãÒ»¸ö°üº¬ n ¸öÕûÊýµÄÊý×é?nums£¬ÅÐ¶Ï?nums?ÖÐÊÇ·ñ´æÔÚÈý¸öÔªËØ a£¬b£¬c £¬Ê¹µÃ?a + b + c = 0 £¿ÇëÄãÕÒ³öËùÓÐÂú×ãÌõ¼þÇÒ²»ÖØ¸´µÄÈýÔª×é¡£
-
-×¢Òâ£º´ð°¸ÖÐ²»¿ÉÒÔ°üº¬ÖØ¸´µÄÈýÔª×é¡£
-
-?
-
-Ê¾Àý£º
-
-¸ø¶¨Êý×é nums = [-1, 0, 1, 2, -1, -4]£¬
-
-Âú×ãÒªÇóµÄÈýÔª×é¼¯ºÏÎª£º
-[
-  [-1, 0, 1],
-  [-1, -1, 2]
-]
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/3sum
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 15.ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ n ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?numsï¿½ï¿½ï¿½Ð¶ï¿½?nums?ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ aï¿½ï¿½bï¿½ï¿½c ï¿½ï¿½Ê¹ï¿½ï¿½?a + b + c = 0 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½é¡£
+ * <p>
+ * ×¢ï¿½â£ºï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½Ô°ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½é¡£
+ * <p>
+ * ?
+ * <p>
+ * Ê¾ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ nums = [-1, 0, 1, 2, -1, -4]ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½é¼¯ï¿½ï¿½Îªï¿½ï¿½
+ * [
+ * [-1, 0, 1],
+ * [-1, -1, 2]
+ * ]
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/3sum
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ * Ë«Ö¸ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½11ï¿½ï¿½â·¨
+ **/
 
 //Java 
-//- * - coding£ºutf-8 - * -
+//- * - codingï¿½ï¿½utf-8 - * -
 //Author:JoeyChen
 //Data:2020/04/08
 
-//·½·¨Ò»£ºÏÈÅÅÐò£¬×ª»¯ÎªÁ½ÊýºÍÎÊÌâ£¬Ê¹ÓÃË«Ö¸Õë½âÌâ
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬Ê¹ï¿½ï¿½Ë«Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½
 /**
-½âÌâË¼Â·£º
-Ë«Ö¸Õë£¬ÀàËÆ11Ìâ½â·¨
-**/
+ ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ Ë«Ö¸ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½11ï¿½ï¿½â·¨
+ **/
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :24 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË85.17%µÄÓÃ»§
-ÄÚ´æÏûºÄ :43.4 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË99.81%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :24 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½85.17%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :43.4 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½99.81%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        Arrays.sort(nums);  //ÅÅÐò---´ÓÐ¡µ½´ó
-        List<List<Integer>> res = new ArrayList<>();  //ÐÂ½¨ÁÐ±í´æ·Å½á¹û
-        for (int i = 0; i < nums.length -2; i++) {
-            if (i>0 && nums[i] == nums[i-1]) continue;  //È¥ÖØ£¬±ÜÃâÖØ¸´ÈýÔª×é
+        Arrays.sort(nums);  //ï¿½ï¿½ï¿½ï¿½---ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
+        List<List<Integer>> res = new ArrayList<>();  //ï¿½Â½ï¿½ï¿½Ð±ï¿½ï¿½Å½ï¿½ï¿½
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;  //È¥ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½
             int left = i + 1, right = nums.length - 1, sum = 0 - nums[i];
             while (left < right) {
                 if (nums[left] + nums[right] == sum) {
                     res.add(Arrays.asList(nums[i], nums[left], nums[right]));
-                    while (left < right && nums[left] == nums[left+1]) left++;  //È¥ÖØ£¬±ÜÃâÖØ¸´ÈýÔª×é
-                    while (left < right && nums[right] == nums[right-1]) right--;  //È¥ÖØ£¬±ÜÃâÖØ¸´ÈýÔª×é
+                    while (left < right && nums[left] == nums[left + 1]) left++;  //È¥ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+                    while (left < right && nums[right] == nums[right - 1]) right--;  //È¥ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½
                     left++;
                     right--;
-                    
+
                 } else if (nums[left] + nums[right] < sum) left++;
                 else right--;
             }
@@ -62,78 +65,78 @@ class Solution {
     }
 }
 
-//·½·¨¶þ£ºJava×îÓÅ½â·¨(Ä¿Ç°Ã»ÓÐ¿´¶®)
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Javaï¿½ï¿½ï¿½Å½â·¨(Ä¿Ç°Ã»ï¿½Ð¿ï¿½ï¿½ï¿½)
 
 /**
-Ö´ÐÐ½á¹û£ºÖ´ÐÐÓÃÊ± :8 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË99.99%µÄÓÃ»§
-ÄÚ´æÏûºÄ :44 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË98.78%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ê± :8 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½99.99%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :44 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½98.78%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
-    public List<List<Integer>> threeSum(int[] nums) { 
-    if (nums.length < 3) return Collections.emptyList(); 
-    List<List<Integer>> res = new ArrayList<>(); 
-    int minValue = Integer.MAX_VALUE; 
-    int maxValue = Integer.MIN_VALUE; 
-    int negSize = 0, posSize = 0; 
-    int zeroSize = 0; 
-    for (int v : nums) { 
-        if (v < minValue) minValue = v; 
-        if (v > maxValue) maxValue = v; 
-        if (v > 0) posSize++; 
-        else if (v < 0) negSize++; 
-        else zeroSize++; 
-    }
-    if (zeroSize >= 3) res.add(Arrays.asList(0, 0, 0));//Êä³ö Èý¸ö 0 µÄÇé¿ö 
-    if (negSize == 0 || posSize == 0) return res;
-    //´ËÊ±minValueÒ»¶¨Îª¸ºÊý£¬maxValueÒ»¶¨ÎªÕýÊý
-    //Èç¹ûmaxValue > -2*minValue£¬ÄÇÃ´´óÓÚ -2*minValueµÄÔªËØ¿Ï¶¨²»»áÊÇ´ð°¸£¬¿ÉÒÔÅÅ³ýµô£¬ËùÒÔ¸üÐÂmaxValue
-    if (minValue * 2 + maxValue > 0) maxValue = -minValue * 2; 
-    //Í¬Àí¸üÐÂminValue
-    else if (maxValue * 2 + minValue < 0) minValue = -maxValue * 2;
-    //×Ô¼º¹¹½¨Ò»¸öhashmap£¬Öµ±íÊ¾ÔªËØÖØ¸´´ÎÊý£¬×¢ÒâjavaÊý×éÄ¬ÈÏÖµÎª 0
-    int[] map = new int[maxValue - minValue + 1];
-    int[] negs = new int[negSize];
-    int[] poses = new int[posSize];
-    negSize = 0;
-    posSize = 0;
-    for (int v : nums) {
-        if (v >= minValue && v <= maxValue) {//Ö»±£ÁôÔÚ[minValue,maxValue]Çø¼äÄÚµÄÔªËØ
-            if (map[v - minValue]++ == 0) {//¼ÆÊý¼ÓÈ¥ÖØ
-                if (v > 0) poses[posSize++] = v;//posesÊý×é´æËùÓÐÈ¥ÖØºóµÄÕýÖµ
-                else if (v < 0) negs[negSize++] = v;//negsÊý×é´æËùÓÐÈ¥ÖØºóµÄ¸ºÖµ 
+    public List<List<Integer>> threeSum(int[] nums) {
+        if (nums.length < 3) return Collections.emptyList();
+        List<List<Integer>> res = new ArrayList<>();
+        int minValue = Integer.MAX_VALUE;
+        int maxValue = Integer.MIN_VALUE;
+        int negSize = 0, posSize = 0;
+        int zeroSize = 0;
+        for (int v : nums) {
+            if (v < minValue) minValue = v;
+            if (v > maxValue) maxValue = v;
+            if (v > 0) posSize++;
+            else if (v < 0) negSize++;
+            else zeroSize++;
+        }
+        if (zeroSize >= 3) res.add(Arrays.asList(0, 0, 0));//ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (negSize == 0 || posSize == 0) return res;
+        //ï¿½ï¿½Ê±minValueÒ»ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½maxValueÒ»ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½maxValue > -2*minValueï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ -2*minValueï¿½ï¿½Ôªï¿½Ø¿Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ð°¸£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½maxValue
+        if (minValue * 2 + maxValue > 0) maxValue = -minValue * 2;
+            //Í¬ï¿½ï¿½ï¿½ï¿½ï¿½minValue
+        else if (maxValue * 2 + minValue < 0) minValue = -maxValue * 2;
+        //ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½hashmapï¿½ï¿½Öµï¿½ï¿½Ê¾Ôªï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½javaï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ÖµÎª 0
+        int[] map = new int[maxValue - minValue + 1];
+        int[] negs = new int[negSize];
+        int[] poses = new int[posSize];
+        negSize = 0;
+        posSize = 0;
+        for (int v : nums) {
+            if (v >= minValue && v <= maxValue) {//Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[minValue,maxValue]ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ôªï¿½ï¿½
+                if (map[v - minValue]++ == 0) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½
+                    if (v > 0) poses[posSize++] = v;//posesï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½Øºï¿½ï¿½ï¿½ï¿½Öµ
+                    else if (v < 0) negs[negSize++] = v;//negsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½Øºï¿½Ä¸ï¿½Öµ
+                }
             }
         }
-    }
-    //Õý¸ºÊýÁ½Êý×éÅÅÐò
-    Arrays.sort(poses, 0, posSize);
-    Arrays.sort(negs, 0, negSize);
-    int basej = 0;
-    for (int i = negSize - 1; i >= 0; i--) {//¸ºÊýÊý×é´ÓºóÍùÇ°±éÀú
-        int nv = negs[i];//nvÎªµ±Ç°¸ºÊýÖµ
-        //minp = -nv/2£¬Ïàµ±ÓÚÈýÔª×éÖÐÁíÍâÁ½ÔªËØµÄÆ½¾ùÖµ£¬¼´ÎªÁíÁ½¸öÔªËØÖÐ½ÏÐ¡ÖµµÄÉÏ½ç£¬½Ï´óÖµµÄÏÂ½ç
-        int minp = (-nv) >>> 1;
-        //¶¨Î»µ½ÕýÊýÊý×éÖÐÖµ¸ÕºÃÐ¡ÓÚÆ½¾ùÖµµÄÔªËØ£¨Õâ¸öµØ·½Ó¦¸Ã»¹¿ÉÒÔÓÅ»¯ÎªÊ¹ÓÃ¶þ·Ö²éÕÒ£©
-        while (basej < posSize && poses[basej] < minp) basej++;
-        for (int j = basej; j < posSize; j++) {//ÕýÊýÊý×é´Ó´óÓÚµÈÓÚÆ½¾ùÖµµÄÔªËØ¿ªÊ¼±éÀú
-            int pv = poses[j];//pv Îªµ±Ç°ÕýÊýÖµ
-            int cv = 0 - nv - pv;//cv ÎªÒªÑ°ÕÒµÄÁíÒ»¸öÖµ
-            //Ä¿±êÖµ cv Ó¦¸ÃÔÚ [nv,pv] µ±ÖÐ
-            //Èç¹û²»ÏÞÖÆcv<=pv£¬µ±nvÎªÆæÊýÊ±£¬ÓÐ¿ÉÄÜ»áÖØ¸´Êä³ö
-            if (cv >= nv && cv <= pv) {
-                if (cv == nv) {
-                    if (map[nv - minValue] > 1)//Á½¸öÏàÍ¬µÄ¸ºÊýºÍÒ»¸öÕýÊýµÄÇé¿ö
-                        res.add(Arrays.asList(nv, nv, pv));
-                } else if (cv == pv) {
-                    if (map[pv - minValue] > 1)//Á½¸öÏàÍ¬µÄÕýÊýºÍÒ»¸ö¸ºÊýµÄÇé¿ö
-                        res.add(Arrays.asList(nv, pv, pv));
-                } else {
-                    if (map[cv - minValue] > 0)//Èý¸ö²»Í¬ÔªËØµÄÇé¿ö
-                        res.add(Arrays.asList(nv, cv, pv));
-                }
-            } else if (cv < nv) break;//Èç¹û cv Ð¡ÓÚ nvÁË£¬±íÃ÷ÕâÖÖÇé¿ö»áÔÚºóÃæÑ°ÕÒ£¬Îª±ÜÃâÖØ¸´Êä³ö£¬Ìø³öÑ­»·
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        Arrays.sort(poses, 0, posSize);
+        Arrays.sort(negs, 0, negSize);
+        int basej = 0;
+        for (int i = negSize - 1; i >= 0; i--) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
+            int nv = negs[i];//nvÎªï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Öµ
+            //minp = -nv/2ï¿½ï¿½ï¿½àµ±ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½Æ½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ð½ï¿½Ð¡Öµï¿½ï¿½ï¿½Ï½ç£¬ï¿½Ï´ï¿½Öµï¿½ï¿½ï¿½Â½ï¿½
+            int minp = (-nv) >>> 1;
+            //ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Õºï¿½Ð¡ï¿½ï¿½Æ½ï¿½ï¿½Öµï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½Ø·ï¿½Ó¦ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å»ï¿½ÎªÊ¹ï¿½Ã¶ï¿½ï¿½Ö²ï¿½ï¿½Ò£ï¿½
+            while (basej < posSize && poses[basej] < minp) basej++;
+            for (int j = basej; j < posSize; j++) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó´ï¿½ï¿½Úµï¿½ï¿½ï¿½Æ½ï¿½ï¿½Öµï¿½ï¿½Ôªï¿½Ø¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+                int pv = poses[j];//pv Îªï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Öµ
+                int cv = 0 - nv - pv;//cv ÎªÒªÑ°ï¿½Òµï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµ
+                //Ä¿ï¿½ï¿½Öµ cv Ó¦ï¿½ï¿½ï¿½ï¿½ [nv,pv] ï¿½ï¿½ï¿½ï¿½
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cv<=pvï¿½ï¿½ï¿½ï¿½nvÎªï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½Ü»ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½
+                if (cv >= nv && cv <= pv) {
+                    if (cv == nv) {
+                        if (map[nv - minValue] > 1)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                            res.add(Arrays.asList(nv, nv, pv));
+                    } else if (cv == pv) {
+                        if (map[pv - minValue] > 1)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                            res.add(Arrays.asList(nv, pv, pv));
+                    } else {
+                        if (map[cv - minValue] > 0)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½
+                            res.add(Arrays.asList(nv, cv, pv));
+                    }
+                } else if (cv < nv) break;//ï¿½ï¿½ï¿½ cv Ð¡ï¿½ï¿½ nvï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½Ñ°ï¿½Ò£ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
+            }
         }
+        return res;
     }
-    return res;
-}
 }

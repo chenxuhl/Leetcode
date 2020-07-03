@@ -1,77 +1,80 @@
 /**
-72.±à¼­¾àÀë
-¸øÄãÁ½¸öµ¥´Ê?word1 ºÍ?word2£¬ÇëÄã¼ÆËã³ö½«?word1?×ª»»³É?word2 ËùÊ¹ÓÃµÄ×îÉÙ²Ù×÷Êý?¡£
-
-Äã¿ÉÒÔ¶ÔÒ»¸öµ¥´Ê½øÐÐÈçÏÂÈýÖÖ²Ù×÷£º
-
-²åÈëÒ»¸ö×Ö·û
-É¾³ýÒ»¸ö×Ö·û
-Ìæ»»Ò»¸ö×Ö·û
-?
-
-Ê¾Àý?1£º
-
-ÊäÈë£ºword1 = "horse", word2 = "ros"
-Êä³ö£º3
-½âÊÍ£º
-horse -> rorse (½« 'h' Ìæ»»Îª 'r')
-rorse -> rose (É¾³ý 'r')
-rose -> ros (É¾³ý 'e')
-Ê¾Àý?2£º
-
-ÊäÈë£ºword1 = "intention", word2 = "execution"
-Êä³ö£º5
-½âÊÍ£º
-intention -> inention (É¾³ý 't')
-inention -> enention (½« 'i' Ìæ»»Îª 'e')
-enention -> exention (½« 'n' Ìæ»»Îª 'x')
-exention -> exection (½« 'n' Ìæ»»Îª 'c')
-exection -> execution (²åÈë 'u')
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/edit-distance
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 72.ï¿½à¼­ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?word1 ï¿½ï¿½?word2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?word1?×ªï¿½ï¿½ï¿½ï¿½?word2 ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ù²ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½
+ * É¾ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½
+ * ï¿½æ»»Ò»ï¿½ï¿½ï¿½Ö·ï¿½
+ * ?
+ * <p>
+ * Ê¾ï¿½ï¿½?1ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ë£ºword1 = "horse", word2 = "ros"
+ * ï¿½ï¿½ï¿½ï¿½ï¿½3
+ * ï¿½ï¿½ï¿½Í£ï¿½
+ * horse -> rorse (ï¿½ï¿½ 'h' ï¿½æ»»Îª 'r')
+ * rorse -> rose (É¾ï¿½ï¿½ 'r')
+ * rose -> ros (É¾ï¿½ï¿½ 'e')
+ * Ê¾ï¿½ï¿½?2ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ë£ºword1 = "intention", word2 = "execution"
+ * ï¿½ï¿½ï¿½ï¿½ï¿½5
+ * ï¿½ï¿½ï¿½Í£ï¿½
+ * intention -> inention (É¾ï¿½ï¿½ 't')
+ * inention -> enention (ï¿½ï¿½ 'i' ï¿½æ»»Îª 'e')
+ * enention -> exention (ï¿½ï¿½ 'n' ï¿½æ»»Îª 'x')
+ * exention -> exection (ï¿½ï¿½ 'n' ï¿½æ»»Îª 'c')
+ * exection -> execution (ï¿½ï¿½ï¿½ï¿½ 'u')
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/edit-distance
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½ï¿½Î¿ï¿½https://www.youtube.com/watch?v=We3YDTzNXEk
+ * ï¿½ï¿½ï¿½ë£ºhttps://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/EditDistance.java
+ **/
 
 //Java 
-//- * - coding£ºutf-8 - * -
+//- * - codingï¿½ï¿½utf-8 - * -
 //Author:JoeyChen
 //Data:2020/04/24
 
-//·½·¨Ò»£º¶¯Ì¬¹æ»®
+//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½æ»®
 
 /**
-½âÌâË¼Â·£º²Î¿¼https://www.youtube.com/watch?v=We3YDTzNXEk
-´úÂë£ºhttps://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/EditDistance.java
-**/
+ ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½ï¿½Î¿ï¿½https://www.youtube.com/watch?v=We3YDTzNXEk
+ ï¿½ï¿½ï¿½ë£ºhttps://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/EditDistance.java
+ **/
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :7 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË62.44%µÄÓÃ»§
-ÄÚ´æÏûºÄ :40.2 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË5.00%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :7 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½62.44%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :40.2 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½5.00%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public int minDistance(String word1, String word2) {
-		//¶þÎ¬Êý×é´æ·Å½á¹û
-        int[][] res = new int[word2.length()+1][word1.length()+1];
-		
-		//³õÊ¼»¯Ê×ÐÐ
+        //ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½Å½ï¿½ï¿½
+        int[][] res = new int[word2.length() + 1][word1.length() + 1];
+
+        //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         for (int i = 0; i <= word1.length(); i++) {
             res[0][i] = i;
         }
-		//³õÊ¼»¯Ê×ÁÐ
+        //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         for (int j = 0; j <= word2.length(); j++) {
             res[j][0] = j;
         }
 
         for (int i = 1; i <= word2.length(); i++) {
             for (int j = 1; j <= word1.length(); j++) {
-				//Á½ÖÖ¸³ÖµÇé¿ö
-                if (word2.charAt(i-1) == word1.charAt(j-1)) {
-                    res[i][j] = res[i-1][j-1];
+                //ï¿½ï¿½ï¿½Ö¸ï¿½Öµï¿½ï¿½ï¿½
+                if (word2.charAt(i - 1) == word1.charAt(j - 1)) {
+                    res[i][j] = res[i - 1][j - 1];
                 } else {
-                    res[i][j] = 1 + Math.min(Math.min(res[i-1][j], res[i-1][j-1]),res[i][j-1]);
+                    res[i][j] = 1 + Math.min(Math.min(res[i - 1][j], res[i - 1][j - 1]), res[i][j - 1]);
                 }
             }
         }

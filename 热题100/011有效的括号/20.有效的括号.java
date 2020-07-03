@@ -1,38 +1,41 @@
 /**
-20.ÓÐÐ§µÄÀ¨ºÅ
-¸ø¶¨Ò»¸öÖ»°üÀ¨ '('£¬')'£¬'{'£¬'}'£¬'['£¬']'?µÄ×Ö·û´®£¬ÅÐ¶Ï×Ö·û´®ÊÇ·ñÓÐÐ§¡£
-
-ÓÐÐ§×Ö·û´®ÐèÂú×ã£º
-
-×óÀ¨ºÅ±ØÐëÓÃÏàÍ¬ÀàÐÍµÄÓÒÀ¨ºÅ±ÕºÏ¡£
-×óÀ¨ºÅ±ØÐëÒÔÕýÈ·µÄË³Ðò±ÕºÏ¡£
-×¢Òâ¿Õ×Ö·û´®¿É±»ÈÏÎªÊÇÓÐÐ§×Ö·û´®¡£
-
-Ê¾Àý 1:
-
-ÊäÈë: "()"
-Êä³ö: true
-Ê¾Àý?2:
-
-ÊäÈë: "()[]{}"
-Êä³ö: true
-Ê¾Àý?3:
-
-ÊäÈë: "(]"
-Êä³ö: false
-Ê¾Àý?4:
-
-ÊäÈë: "([)]"
-Êä³ö: false
-Ê¾Àý?5:
-
-ÊäÈë: "{[]}"
-Êä³ö: true
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/valid-parentheses
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-**/
+ * 20.ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ '('ï¿½ï¿½')'ï¿½ï¿½'{'ï¿½ï¿½'}'ï¿½ï¿½'['ï¿½ï¿½']'?ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½Ð§ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã£º
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ÕºÏ¡ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½Ë³ï¿½ï¿½ÕºÏ¡ï¿½
+ * ×¢ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½É±ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * Ê¾ï¿½ï¿½ 1:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: "()"
+ * ï¿½ï¿½ï¿½: true
+ * Ê¾ï¿½ï¿½?2:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: "()[]{}"
+ * ï¿½ï¿½ï¿½: true
+ * Ê¾ï¿½ï¿½?3:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: "(]"
+ * ï¿½ï¿½ï¿½: false
+ * Ê¾ï¿½ï¿½?4:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: "([)]"
+ * ï¿½ï¿½ï¿½: false
+ * Ê¾ï¿½ï¿½?5:
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½: "{[]}"
+ * ï¿½ï¿½ï¿½: true
+ * <p>
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/valid-parentheses
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * <p>
+ * ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½Ð¶ï¿½Õ»ï¿½ï¿½ï¿½Ç·ï¿½ÎªÆ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ä£¬ï¿½ò·µ»ï¿½trueï¿½ï¿½ï¿½ï¿½È»false
+ **/
 
 //Java
 //-*- coding:utf-8 -*-
@@ -40,38 +43,38 @@
 //2020/04/10
 
 /**
-½âÌâË¼Â·£º
-	ÀûÓÃÕ»µÄÐÔÖÊ¡°ÏÈ½øºó³ö¡±½«×óÀ¨ºÅÒÀ´ÎÈëÕ»£¬ÈôÎªÓÒÀ¨ºÅ£¬ÅÐ¶ÏÕ»¶¥ÊÇ·ñÎªÆ¥ÅäµÄ×óÀ¨ºÅ£¬Èô¶¼ÒÀ´ÎÆ¥Åä£¬Ôò·µ»Øtrue£¬²»È»false
-**/
+ ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+ ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½Ð¶ï¿½Õ»ï¿½ï¿½ï¿½Ç·ï¿½ÎªÆ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ä£¬ï¿½ò·µ»ï¿½trueï¿½ï¿½ï¿½ï¿½È»false
+ **/
 
 /**
-Ö´ÐÐ½á¹û£º
-Ö´ÐÐÓÃÊ± :2 ms, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË89.13%µÄÓÃ»§
-ÄÚ´æÏûºÄ :37.8 MB, ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË5.08%µÄÓÃ»§
-**/
+ Ö´ï¿½Ð½ï¿½ï¿½ï¿½ï¿½
+ Ö´ï¿½ï¿½ï¿½ï¿½Ê± :2 ms, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½89.13%ï¿½ï¿½ï¿½Ã»ï¿½
+ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ :37.8 MB, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½5.08%ï¿½ï¿½ï¿½Ã»ï¿½
+ **/
 
 class Solution {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
 
-        for (int i = 0;i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             char elemt = s.charAt(i);
             if (elemt == '(' || elemt == '[' || elemt == '{') {
                 stack.push(elemt);
-            } 
+            }
             //
             else {
                 if (stack.isEmpty()) return false;
                 else {
-                    char topelemt = stack.pop(); //ÀëÓÒÀ¨ºÅ×î½üµÄ×óÀ¨ºÅ ÅÐ¶ÏÊÇ·ñÆ¥Åä
+                    char topelemt = stack.pop(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½
                     if (elemt == ')' && topelemt != '(') return false;
                     else if (elemt == ']' && topelemt != '[') return false;
-                    else if (elemt == '}' && topelemt != '{') return false; 
+                    else if (elemt == '}' && topelemt != '{') return false;
                 }
             }
 
         }
-        return stack.isEmpty();  //ÈôÀ¨ºÅÈ«¶¼Æ¥Åä£¬×îºóÓ¦Îª¿ÕÕ»
+        return stack.isEmpty();  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½Æ¥ï¿½ä£¬ï¿½ï¿½ï¿½Ó¦Îªï¿½ï¿½Õ»
 
     }
 }
