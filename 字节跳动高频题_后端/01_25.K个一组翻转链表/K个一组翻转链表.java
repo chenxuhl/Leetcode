@@ -29,7 +29,7 @@ k 是一个正整数，它的值小于或等于链表的长度。
 //递归：参考：https://www.youtube.com/watch?v=DryIN7iL4pA
 
 //java
-//Auther:Joey
+//Author:Joey
 //Date：2020/07/03
 /**
  * Definition for singly-linked list.
