@@ -1,45 +1,45 @@
 /*
-3. ���ظ��ַ�����Ӵ�
-����һ���ַ����������ҳ����в������ظ��ַ��� ��Ӵ� �ĳ��ȡ�
+3. 无重复字符的最长子串
+给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 
-ʾ�� 1:
+示例 1:
 
-����: "abcabcbb"
-���: 3 
-����: ��Ϊ���ظ��ַ�����Ӵ��� "abc"�������䳤��Ϊ 3��
-ʾ�� 2:
+输入: "abcabcbb"
+输出: 3 
+解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+示例 2:
 
-����: "bbbbb"
-���: 1
-����: ��Ϊ���ظ��ַ�����Ӵ��� "b"�������䳤��Ϊ 1��
-ʾ�� 3:
+输入: "bbbbb"
+输出: 1
+解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+示例 3:
 
-����: "pwwkew"
-���: 3
-����: ��Ϊ���ظ��ַ�����Ӵ��� "wke"�������䳤��Ϊ 3��
-     ��ע�⣬��Ĵ𰸱����� �Ӵ� �ĳ��ȣ�"pwke" ��һ�������У������Ӵ���
+输入: "pwwkew"
+输出: 3
+解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
+     请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
 */
 
 /*
-����˼·�����û���ԭ������������ָ�룬�ֱ�ָ�򻬴��������ˣ�Լ���Ӵ����ȺͰ����ַ�
-�ο���https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetc-2/
+解题思路：利用滑窗原理，采用左右指针，分别指向滑窗左右两端，约束子串长度和包含字符
+参考：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetc-2/
 */
 
 //Java
 //Author:Joey
-//Date��2020/07/05
+//Date：2020/07/05
 
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        Set<Character> occ = new HashSet<Character>();  //��ϣ���ϣ��ж��Ƿ����ظ��ַ�
+        Set<Character> occ = new HashSet<Character>();  //哈希集合，判断是否有重复字符
         int n = s.length();
-        int rk = -1, ans = 0;  //rk---��ָ�룬��ʼֵ-1������߽���࣬��û��ʼ�ƶ�
+        int rk = -1, ans = 0;  //rk---右指针，初始值-1，在左边界左侧，还没开始移动
         for (int i = 0; i < n; ++i) {
-            if (i != 0) {  //��ָ������һ��occ����Ƴ�һ���ַ�
+            if (i != 0) {  //左指针右移一格，occ左侧移除一个字符
                 occ.remove(s.charAt(i - 1));
             }
-            while (rk + 1 < n && !occ.contains(s.charAt(rk + 1))) {  //����������ָ�룬���ж�occ���Ƿ�����Ҳ����ַ�
-                occ.add(s.charAt(rk + 1));  //��occ�м����ַ�
+            while (rk + 1 < n && !occ.contains(s.charAt(rk + 1))) {  //不断右移右指针，并判断occ中是否包含右侧新字符
+                occ.add(s.charAt(rk + 1));  //往occ中加入字符
                 ++rk;
             }
             ans = Math.max(ans, rk - i + 1);
