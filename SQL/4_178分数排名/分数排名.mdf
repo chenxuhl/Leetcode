@@ -1,0 +1,9 @@
+#题目连接：https://leetcode-cn.com/problems/rank-scores/
+#解题链接：https://leetcode-cn.com/problems/rank-scores/solution/fen-cheng-liang-ge-bu-fen-xie-hui-rong-yi-hen-duo-/
+
+# Write your MySQL query statement below
+select a.Score as Score,
+(select count(distinct b.Score) from Scores b 
+where b.Score >= a.Score) as `Rank`
+from Scores a
+order by a.Score DESC
