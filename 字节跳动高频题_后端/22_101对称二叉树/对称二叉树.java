@@ -1,10 +1,10 @@
 /*
-101. �Գƶ�����
-����һ����������������Ƿ��Ǿ���ԳƵġ�
+101. 对称二叉树
+给定一个二叉树，检查它是否是镜像对称的。
 
  
 
-���磬������ [1,2,2,3,4,4,3] �ǶԳƵġ�
+例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
 
     1
    / \
@@ -13,7 +13,7 @@
 3  4 4  3
  
 
-����������� [1,2,2,null,3,null,3] ���Ǿ���ԳƵ�:
+但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
 
     1
    / \
@@ -22,21 +22,21 @@
    3    3
  
 
-���ף�
+进阶：
 
-��������õݹ�͵������ַ���������������
+你可以运用递归和迭代两种方法解决这个问题吗？
 */
 
-//�ο��ٷ��𰸣��ݹ�
+//参考官方答案：递归
 
 //Java
 //Author:Joey
-//Date��2020/07/20
+//Date：2020/07/20
 
 /*
-ִ�н����
-ִ����ʱ��0 ms, ������ Java �ύ�л�����100.00%���û�
-�ڴ����ģ�37.8 MB, ������ Java �ύ�л�����35.00%���û�
+执行结果：
+执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
+内存消耗：37.8 MB, 在所有 Java 提交中击败了35.00%的用户
 */
 
 /**
@@ -49,7 +49,7 @@
  * }
  */
 class Solution {
-    public boolean isSymmetric(TreeNode root) {  //�ѵ����ڣ��õ�˫ָ��
+    public boolean isSymmetric(TreeNode root) {  //难点在于：用到双指针
         return helper(root, root);        
     }
     public boolean helper(TreeNode p, TreeNode q) {
@@ -63,7 +63,7 @@ class Solution {
     }
 }
 
-//���������ö��У��ݹ�ĵ������÷�����
+//迭代，，用队列（递归改迭代常用方法）
 
 /**
  * Definition for a binary tree node.
