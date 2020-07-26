@@ -8,4 +8,7 @@
 
 #### 4. [LeetCode刷SQL](<https://leetcode-cn.com/problemset/database/>)
 
+#### 5.[LeetCode剑指offer](<https://leetcode-cn.com/problemset/lcof/>)
+
 ##### P.S.使用Python和Java两种语言，详细记录了解题思路，以及尽可能提供多种解法。
+
