@@ -29,7 +29,7 @@
 
 //解题思路：先排序，再统计
 
-//时间复杂度：O(n^2), 空间复杂度：O(1)
+//时间复杂度：O(nlogn), 空间复杂度：O(1)
 
 class Solution {
     public int majorityElement(int[] nums) {
