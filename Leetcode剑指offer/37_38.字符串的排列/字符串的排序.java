@@ -29,6 +29,7 @@
 
 class Solution {
 
+
     List<String> res = new LinkedList();
     char[] c;
 
