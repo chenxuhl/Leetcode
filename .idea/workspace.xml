@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="951e4743-7cf5-481d-8f26-39422a7e5a94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/腾讯精选50题/Q.txt" beforeDir="false" afterPath="$PROJECT_DIR$/腾讯精选50题/Q.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Leetcode剑指offer/37_38.字符串的排列/字符串的排序.java" beforeDir="false" afterPath="$PROJECT_DIR$/Leetcode剑指offer/37_38.字符串的排列/字符串的排序.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +23,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_java" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.19125" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
@@ -57,6 +58,9 @@
       <workItem from="1594689106449" duration="57000" />
       <workItem from="1594689199321" duration="32000" />
       <workItem from="1594689257393" duration="61000" />
+      <workItem from="1597544993022" duration="106000" />
+      <workItem from="1597545228224" duration="265000" />
+      <workItem from="1597545833409" duration="13000" />
     </task>
     <servers />
   </component>
@@ -64,10 +68,16 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1578" y="-50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593999307068">
-      <screen x="1366" y="-137" width="1600" height="860" />
+    <state x="275" y="22" key="#Notifications" timestamp="1597544999988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Notifications/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1597544999988" />
+    <state x="1620" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597545283699">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1578" y="-50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.-137.1600.860@1366.-137.1600.860" timestamp="1593999307068" />
+    <state x="181" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1597545013982" />
+    <state x="1620" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1597545283699" />
     <state x="1792" y="26" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1593998550958">
       <screen x="1366" y="-137" width="1600" height="860" />
     </state>
@@ -76,6 +86,11 @@
       <screen x="1366" y="-137" width="1600" height="860" />
     </state>
     <state x="1871" y="64" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728/1366.-137.1600.860@1366.-137.1600.860" timestamp="1593998245433" />
+    <state x="374" y="142" key="FileChooserDialogImpl" timestamp="1597545843278">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="374" y="142" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1597545843278" />
+    <state x="1892" y="203" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1597545311519" />
     <state width="1545" height="38" key="GridCell.Tab.0.bottom" timestamp="1594000400688">
       <screen x="1366" y="-137" width="1600" height="860" />
     </state>
@@ -92,14 +107,16 @@
       <screen x="1366" y="-137" width="1600" height="860" />
     </state>
     <state width="1545" height="38" key="GridCell.Tab.0.right/0.0.1366.728/1366.-137.1600.860@1366.-137.1600.860" timestamp="1594000400688" />
-    <state x="1476" y="-137" key="SettingsEditor" timestamp="1594689304460">
-      <screen x="1366" y="-137" width="1600" height="860" />
+    <state x="1592" y="91" key="SettingsEditor" timestamp="1597545337653">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="68" y="0" key="SettingsEditor/0.0.1366.728/1366.-137.1600.860@0.0.1366.728" timestamp="1593957840400" />
     <state x="1476" y="-137" key="SettingsEditor/0.0.1366.728/1366.-137.1600.860@1366.-137.1600.860" timestamp="1594689304460" />
-    <state x="1367" y="-137" key="new project wizard" timestamp="1594000235005">
-      <screen x="1366" y="-137" width="1600" height="860" />
+    <state x="1592" y="91" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1597545337653" />
+    <state x="1367" y="0" key="new project wizard" timestamp="1597545331408">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1367" y="-137" key="new project wizard/0.0.1366.728/1366.-137.1600.860@1366.-137.1600.860" timestamp="1594000235005" />
+    <state x="1367" y="0" key="new project wizard/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1597545331408" />
   </component>
 </project>
